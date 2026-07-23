@@ -1,1 +1,20 @@
-name: Publicar web\non:\n  workflow_dispatch:\npermissions:\n  contents: write\njobs:\n  unpack:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - name: Expandir build na raiz\n        run: |\n          unzip -o leve-web.zip -d /tmp/site\n          rsync -a /tmp/site/ ./\n          rm -f leve-web.zip\n          git config user.name "leve-setup"\n          git config user.email "actions@users.noreply.github.com"\n          git add -A\n          git commit -m "Publicar build web"\n          git push\n
+name: Publicar web
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Expandir build na raiz
+        run: |
+          unzip -o leve-web.zip -d /tmp/site
+          rsync -a /tmp/site/ ./
+          rm -f leve-web.zip
+          git config user.name "leve-setup"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Publicar build web"
+          git push
