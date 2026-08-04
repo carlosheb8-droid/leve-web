@@ -3,34 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <title>leve - Política de Privacidade</title>
 <style>
   body { margin: 0; background: #f5f5f7; color: #1d1d1f; font-family: -apple-system, "Segoe UI", Roboto, sans-serif; }
   main { max-width: 640px; margin: 0 auto; padding: 48px 24px 80px; }
-  h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; }
+  h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 4px; }
   h1 span { color: #128a67; }
-  .draft { display: inline-block; background: #e9f4f0; color: #128a67; font-size: 12px; font-weight: 700; letter-spacing: 0.6px; border-radius: 999px; padding: 6px 14px; margin-bottom: 18px; }
-  h2 { font-size: 17px; font-weight: 600; margin-top: 32px; }
-  p, li { font-size: 15px; line-height: 1.65; color: #4b4b50; }
+  .meta { font-size: 13px; color: #6e6e73; margin-bottom: 28px; }
+  h2 { font-size: 17px; font-weight: 600; margin-top: 34px; }
+  p, li { font-size: 15px; line-height: 1.7; color: #4b4b50; }
+  strong { color: #1d1d1f; }
   a { color: #128a67; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { text-align: left; font-size: 14px; color: #4b4b50; padding: 8px 10px; border-bottom: 1px solid #e3e3e6; vertical-align: top; }
+  th { color: #1d1d1f; font-weight: 600; }
+  .foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid #e3e3e6; font-size: 12.5px; color: #6e6e73; }
 </style>
 </head>
 <body>
 <main>
-  <p class="draft">VERSÃO DE DEMONSTRAÇÃO - DOCUMENTO EM ELABORAÇÃO</p>
   <h1>Política de Privacidade do <span>leve.</span></h1>
-  <p>Esta é a versão de demonstração do leve. O texto final da Política de Privacidade está em elaboração e será publicado nesta mesma página antes do lançamento nas lojas.</p>
-  <h2>O que já vale desde já</h2>
-  <ul>
-    <li>Na demonstração, as respostas do onboarding ficam <strong>somente no seu aparelho</strong> (armazenamento local do navegador). Nada é enviado a servidor.</li>
-    <li>Dados de saúde são <strong>dados sensíveis</strong> pela LGPD (art. 11). Quando houver conta e sincronização, o tratamento será feito com consentimento explícito, finalidade única de operar o app e opção de apagar tudo.</li>
-    <li>O leve não vende dados, não usa dados de saúde pra publicidade e não compartilha com terceiros fora dos processadores necessários pra operar o serviço.</li>
-  </ul>
-  <h2>Seus direitos (LGPD)</h2>
-  <p>Acesso, correção, portabilidade e eliminação dos seus dados, a qualquer momento. Na demonstração, limpar os dados do navegador remove tudo.</p>
-  <h2>Contato</h2>
-  <p>Encarregado provisório: <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a></p>
+  <p class="meta">Versão 1.0 · vigente a partir de 4 de agosto de 2026 · LGPD (Lei 13.709/2018)</p>
+
+  <h2>1. Quem controla os dados</h2>
+  <p>O controlador é o responsável pelo leve, contato <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a> - também o canal do encarregado (DPO) enquanto o produto está em fase inicial.</p>
+
+  <h2>2. Quais dados o leve trata e para quê</h2>
+  <table>
+    <tr><th>Dado</th><th>Para quê</th><th>Base legal</th></tr>
+    <tr><td>E-mail</td><td>criar a conta e recuperar acesso</td><td>execução de contrato</td></tr>
+    <tr><td>Sexo, nascimento, altura, peso, % de gordura estimado, meta</td><td>calcular plano, projeções e meta de proteína</td><td><strong>consentimento</strong> (dado de saúde, art. 11)</td></tr>
+    <tr><td>Medicamento, dose, dia e hora da aplicação, local de aplicação, efeitos percebidos, condições marcadas</td><td>lembretes, rodízio, diário e relatório pro médico</td><td><strong>consentimento</strong> (dado de saúde, art. 11)</td></tr>
+    <tr><td>Registros técnicos básicos (aparelho, falhas)</td><td>manter o app funcionando e corrigir erros</td><td>legítimo interesse</td></tr>
+  </table>
+  <p><strong>O leve não coleta</strong>: dados de cartão (ficam com a App Store/Google Play), localização, contatos, fotos além das que você mesmo escanear, e não usa seus dados de saúde para publicidade.</p>
+
+  <h2>3. Onde os dados ficam</h2>
+  <p>Na versão de demonstração (web), tudo fica <strong>no seu aparelho</strong> - limpar os dados do navegador apaga tudo. Na versão com conta, os dados são armazenados em provedor de nuvem contratado (Supabase), com criptografia em trânsito e em repouso, podendo haver transferência internacional com as salvaguardas do art. 33 da LGPD.</p>
+
+  <h2>4. Com quem o leve compartilha</h2>
+  <p>Somente com operadores necessários para o serviço funcionar (infraestrutura de nuvem, processamento de assinatura pelas lojas). Nunca há venda de dados. Autoridades públicas só mediante obrigação legal.</p>
+
+  <h2>5. Consentimento</h2>
+  <p>Os dados de saúde só são tratados com o seu consentimento, colhido de forma destacada no onboarding. Você pode <strong>revogar a qualquer momento</strong> dentro do app ou pelo contato acima - revogado, os dados de saúde deixam de ser tratados e são apagados, salvo dever legal de guarda.</p>
+
+  <h2>6. Seus direitos (art. 18 da LGPD)</h2>
+  <p>Confirmação de tratamento, acesso, correção, anonimização, portabilidade, eliminação, informação sobre compartilhamentos e revisão de decisões automatizadas. É só pedir pelo contato acima - resposta em até 15 dias. Você também pode reclamar à ANPD.</p>
+
+  <h2>7. Por quanto tempo os dados ficam guardados</h2>
+  <p>Enquanto a conta existir. Encerrada a conta ou revogado o consentimento, os dados são apagados em até 30 dias, exceto o que a lei exigir manter (por exemplo, registros de acesso do Marco Civil, 6 meses).</p>
+
+  <h2>8. Segurança</h2>
+  <p>Criptografia em trânsito (TLS) e em repouso, acesso restrito, e princípio de coleta mínima - o leve só pede o que usa no cálculo do seu plano. Nenhum sistema é 100% seguro; incidente relevante será comunicado a você e à ANPD nos termos do art. 48.</p>
+
+  <h2>9. Crianças e adolescentes</h2>
+  <p>O leve é para maiores de 18 anos e não coleta dados de menores conscientemente.</p>
+
+  <h2>10. Mudanças nesta política</h2>
+  <p>Atualizações ficam sempre nesta página, com a data de vigência no topo. Mudança relevante no tratamento de dados de saúde será avisada no app e, se necessário, pedirá novo consentimento.</p>
+
+  <p class="foot">Documento padrão preparado para a fase de demonstração do produto. Antes da publicação nas lojas, recomenda-se revisão por advogado.</p>
 </main>
 </body>
 </html>
