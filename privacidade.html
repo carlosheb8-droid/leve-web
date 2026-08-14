@@ -23,35 +23,41 @@
 <body>
 <main>
   <h1>Política de Privacidade do <span>leve.</span></h1>
-  <p class="meta">Versão 1.0 · vigente a partir de 4 de agosto de 2026 · LGPD (Lei 13.709/2018)</p>
+  <p class="meta">Versão 2.0 · vigente a partir de 14 de agosto de 2026 · LGPD (Lei 13.709/2018)</p>
 
   <h2>1. Quem controla os dados</h2>
   <p>O controlador é o responsável pelo leve, contato <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a> - também o canal do encarregado (DPO) enquanto o produto está em fase inicial.</p>
 
   <h2>2. Quais dados o leve trata e para quê</h2>
   <table>
-    <tr><th>Dado</th><th>Para quê</th><th>Base legal</th></tr>
-    <tr><td>E-mail</td><td>criar a conta e recuperar acesso</td><td>execução de contrato</td></tr>
-    <tr><td>Sexo, nascimento, altura, peso, % de gordura estimado, meta</td><td>calcular plano, projeções e meta de proteína</td><td><strong>consentimento</strong> (dado de saúde, art. 11)</td></tr>
-    <tr><td>Medicamento, dose, dia e hora da aplicação, local de aplicação, efeitos percebidos, condições marcadas</td><td>lembretes, rodízio, diário e relatório pro médico</td><td><strong>consentimento</strong> (dado de saúde, art. 11)</td></tr>
-    <tr><td>Registros técnicos básicos (aparelho, falhas)</td><td>manter o app funcionando e corrigir erros</td><td>legítimo interesse</td></tr>
+    <tr><th>Dado</th><th>Para quê</th><th>Onde fica</th><th>Base legal</th></tr>
+    <tr><td>Sexo, idade, altura, peso, % de gordura estimado, meta</td><td>calcular seu plano, projeção e meta de proteína</td><td><strong>só no seu aparelho</strong></td><td>consentimento (dado de saúde, art. 11)</td></tr>
+    <tr><td>Medicamento, dose, dia e hora da aplicação, local, efeitos, condições marcadas</td><td>lembretes, rodízio, diário e relatório para o médico</td><td><strong>só no seu aparelho</strong></td><td>consentimento (dado de saúde, art. 11)</td></tr>
+    <tr><td>Fotos de progresso e fotos de prato</td><td>comparar antes e agora; estimar a refeição</td><td><strong>só no seu aparelho</strong>. A foto de prato é enviada para análise e <strong>não é guardada</strong> pelo servidor</td><td>consentimento</td></tr>
+    <tr><td>Eventos anônimos de uso (app aberto, tela vista, recurso usado)</td><td>saber se o app funciona e onde as pessoas travam</td><td>nuvem (Supabase), sob identificador aleatório do aparelho</td><td>legítimo interesse</td></tr>
+    <tr><td><strong>Pesquisa (opcional)</strong>: peso, doses, efeitos, proteína, água e sono</td><td>estudar como o tratamento com GLP-1 funciona na vida real</td><td>nuvem (Supabase), sob identificador aleatório, <strong>sem seu nome, e-mail ou fotos</strong></td><td><strong>consentimento específico</strong>, que você liga e desliga no Perfil</td></tr>
   </table>
-  <p><strong>O leve não coleta</strong>: dados de cartão (ficam com a App Store/Google Play), localização, contatos, fotos além das que você mesmo escanear, e não usa seus dados de saúde para publicidade.</p>
+  <p><strong>O leve não coleta</strong>: dados de cartão (ficam com a App Store), localização, contatos e agenda. O leve <strong>não vende dados</strong> e <strong>nunca usa dado de saúde para publicidade</strong>. O app não pede login: não existe conta, senha nem e-mail.</p>
 
   <h2>3. Onde os dados ficam</h2>
-  <p>Na versão de demonstração (web), tudo fica <strong>no seu aparelho</strong> - limpar os dados do navegador apaga tudo. Na versão com conta, os dados são armazenados em provedor de nuvem contratado (Supabase), com criptografia em trânsito e em repouso, podendo haver transferência internacional com as salvaguardas do art. 33 da LGPD.</p>
+  <p><strong>Por padrão, tudo fica no seu aparelho.</strong> Peso, doses, efeitos, rotina e fotos ficam guardados apenas no celular, sem cópia em servidor. Se você desinstalar o app sem fazer backup, esses dados somem - nem nós conseguimos recuperar.</p>
+  <p>Saem do aparelho apenas duas coisas: os <strong>eventos anônimos de uso</strong>, que não contêm dado de saúde; e, <strong>se e enquanto você ligar</strong>, os dados da pesquisa. Ambos ficam em provedor de nuvem contratado (Supabase), com criptografia em trânsito e em repouso, podendo haver transferência internacional com as salvaguardas do art. 33 da LGPD.</p>
+  <p>A <strong>foto do prato</strong> é enviada ao serviço de análise apenas no momento em que você pede a leitura, e não é armazenada por nós. As <strong>fotos de corpo nunca são enviadas</strong> a lugar nenhum.</p>
 
   <h2>4. Com quem o leve compartilha</h2>
   <p>Somente com operadores necessários para o serviço funcionar (infraestrutura de nuvem, processamento de assinatura pelas lojas). Nunca há venda de dados. Autoridades públicas só mediante obrigação legal.</p>
 
   <h2>5. Consentimento</h2>
-  <p>Os dados de saúde só são tratados com o seu consentimento, colhido de forma destacada no onboarding. Você pode <strong>revogar a qualquer momento</strong> dentro do app ou pelo contato acima - revogado, os dados de saúde deixam de ser tratados e são apagados, salvo dever legal de guarda.</p>
+  <p>Existem <strong>dois consentimentos separados</strong>, e um não depende do outro:</p>
+  <p><strong>a) Para o app funcionar.</strong> Os dados de saúde que você digita são tratados no seu aparelho para gerar seu plano, seus lembretes e seu relatório. Sem isso o app não tem função.</p>
+  <p><strong>b) Para a pesquisa.</strong> É opcional, <strong>nasce desligado</strong> e fica em Perfil &gt; Dados e privacidade &gt; Ajudar na pesquisa. Ligado, sobem peso, doses, efeitos, proteína, água e sono, ligados a um identificador aleatório do aparelho - <strong>sem nome, sem e-mail, sem fotos</strong>. A finalidade é estudar como o tratamento com GLP-1 funciona na vida real. <strong>Recusar não tira nenhuma funcionalidade</strong>: o app continua exatamente igual.</p>
+  <p>Você pode <strong>revogar quando quiser</strong>. Desligar interrompe novos envios na hora, e o botão <em>Apagar meus dados da pesquisa</em> remove o que já foi enviado. Guardamos qual versão deste texto você aceitou e quando.</p>
 
   <h2>6. Seus direitos (art. 18 da LGPD)</h2>
   <p>Confirmação de tratamento, acesso, correção, anonimização, portabilidade, eliminação, informação sobre compartilhamentos e revisão de decisões automatizadas. É só pedir pelo contato acima - resposta em até 15 dias. Você também pode reclamar à ANPD.</p>
 
   <h2>7. Por quanto tempo os dados ficam guardados</h2>
-  <p>Enquanto a conta existir. Encerrada a conta ou revogado o consentimento, os dados são apagados em até 30 dias, exceto o que a lei exigir manter (por exemplo, registros de acesso do Marco Civil, 6 meses).</p>
+  <p>No aparelho, enquanto você mantiver o app instalado - apagar o app apaga os dados. Na pesquisa, enquanto o consentimento estiver ligado; ao apagar, a remoção é imediata. Eventos anônimos de uso são mantidos por até 24 meses de forma agregada.</p>
 
   <h2>8. Segurança</h2>
   <p>Criptografia em trânsito (TLS) e em repouso, acesso restrito, e princípio de coleta mínima - o leve só pede o que usa no cálculo do seu plano. Nenhum sistema é 100% seguro; incidente relevante será comunicado a você e à ANPD nos termos do art. 48.</p>
