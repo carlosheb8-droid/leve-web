@@ -1,74 +1,105 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>leve - Política de Privacidade</title>
-<style>
-  body { margin: 0; background: #f5f5f7; color: #1d1d1f; font-family: -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 640px; margin: 0 auto; padding: 48px 24px 80px; }
-  h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 4px; }
-  h1 span { color: #128a67; }
-  .meta { font-size: 13px; color: #6e6e73; margin-bottom: 28px; }
-  h2 { font-size: 17px; font-weight: 600; margin-top: 34px; }
-  p, li { font-size: 15px; line-height: 1.7; color: #4b4b50; }
-  strong { color: #1d1d1f; }
-  a { color: #128a67; }
-  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
-  th, td { text-align: left; font-size: 14px; color: #4b4b50; padding: 8px 10px; border-bottom: 1px solid #e3e3e6; vertical-align: top; }
-  th { color: #1d1d1f; font-weight: 600; }
-  .foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid #e3e3e6; font-size: 12.5px; color: #6e6e73; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Política de Privacidade - leve</title>
+  <style>
+    :root { color-scheme:light; --ink:#173f36; --text:#294840; --muted:#64766f; --line:#d9e7e1; --bg:#f4fbf7; --card:#fff; --accent:#0f7f5f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(800px,calc(100% - 32px)); margin:40px auto; padding:clamp(24px,6vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; box-shadow:0 18px 50px rgba(23,63,54,.06); }
+    h1,h2 { color:var(--ink); line-height:1.2; letter-spacing:-.02em; }
+    h1 { font-size:clamp(32px,7vw,48px); margin:0 0 8px; }
+    h2 { font-size:21px; margin:36px 0 10px; }
+    p,li { max-width:72ch; }
+    ul { padding-left:22px; }
+    .meta,.note { color:var(--muted); }
+    .summary { margin:28px 0; padding:18px 20px; border-left:4px solid var(--accent); background:#eef8f3; border-radius:0 16px 16px 0; }
+    .table { overflow-x:auto; margin:16px 0; }
+    table { width:100%; border-collapse:collapse; min-width:620px; font-size:14px; }
+    th,td { padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--ink); background:#f5faf7; }
+    a { color:var(--accent); }
+    footer { margin-top:42px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  </style>
 </head>
 <body>
 <main>
-  <h1>Política de Privacidade do <span>leve.</span></h1>
-  <p class="meta">Versão 2.0 · vigente a partir de 14 de agosto de 2026 · LGPD (Lei 13.709/2018)</p>
+  <p class="meta">leve - versão 3.0 - 26 de agosto de 2026</p>
+  <h1>Política de Privacidade</h1>
+  <p class="summary"><strong>Em resumo:</strong> seus registros ficam no aparelho por padrão. O backup de dados de saúde é opcional e só começa após sua autorização. Fotos de progresso não são enviadas para o leve. Não vendemos seus dados, não exibimos anúncios e não usamos seus registros para pesquisa.</p>
 
   <h2>1. Quem controla os dados</h2>
-  <p>O controlador é o responsável pelo leve, contato <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a> - também o canal do encarregado (DPO) enquanto o produto está em fase inicial.</p>
+  <p>O controlador é o responsável pelo aplicativo leve. O canal para privacidade, exercício de direitos e contato com o encarregado é <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.</p>
 
-  <h2>2. Quais dados o leve trata e para quê</h2>
-  <table>
-    <tr><th>Dado</th><th>Para quê</th><th>Onde fica</th><th>Base legal</th></tr>
-    <tr><td>Sexo, idade, altura, peso, % de gordura estimado, meta</td><td>calcular seu plano, projeção e meta de proteína</td><td><strong>só no seu aparelho</strong></td><td>consentimento (dado de saúde, art. 11)</td></tr>
-    <tr><td>Medicamento, dose, dia e hora da aplicação, local, efeitos, condições marcadas</td><td>lembretes, rodízio, diário e relatório para o médico</td><td><strong>só no seu aparelho</strong></td><td>consentimento (dado de saúde, art. 11)</td></tr>
-    <tr><td>Fotos de progresso e fotos de prato</td><td>comparar antes e agora; estimar a refeição</td><td><strong>só no seu aparelho</strong>. A foto de prato é enviada para análise e <strong>não é guardada</strong> pelo servidor</td><td>consentimento</td></tr>
-    <tr><td>Eventos anônimos de uso (app aberto, tela vista, recurso usado)</td><td>saber se o app funciona e onde as pessoas travam</td><td>nuvem (Supabase), sob identificador aleatório do aparelho</td><td>legítimo interesse</td></tr>
-    <tr><td><strong>Pesquisa (opcional)</strong>: peso, doses, efeitos, proteína, água e sono</td><td>estudar como o tratamento com GLP-1 funciona na vida real</td><td>nuvem (Supabase), sob identificador aleatório, <strong>sem seu nome, e-mail ou fotos</strong></td><td><strong>consentimento específico</strong>, que você liga e desliga no Perfil</td></tr>
-  </table>
-  <p><strong>O leve não coleta</strong>: dados de cartão (ficam com a App Store), localização, contatos e agenda. O leve <strong>não vende dados</strong> e <strong>nunca usa dado de saúde para publicidade</strong>. O app não pede login: não existe conta, senha nem e-mail.</p>
+  <h2>2. Dados tratados e onde ficam</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Dados</th><th>Finalidade</th><th>Onde ficam</th></tr></thead>
+      <tbody>
+        <tr><td>Perfil, tratamento, peso, alimentação, proteína, água, sono, atividade, efeitos e preferências</td><td>Personalizar o acompanhamento, formar histórico, mostrar tendências e gerar relatório</td><td>No aparelho. Também no backup da conta, somente se você ativá-lo</td></tr>
+        <tr><td>E-mail e identificador da conta</td><td>Enviar código de acesso, autenticar e vincular o backup</td><td>No provedor de conta e banco de dados</td></tr>
+        <tr><td>Fotos de progresso</td><td>Comparação visual privada</td><td>Somente no aparelho, fora do backup</td></tr>
+        <tr><td>Foto ou descrição de refeição</td><td>Gerar uma estimativa de alimentos e nutrientes</td><td>Enviada de forma transitória aos provedores de infraestrutura e IA quando você pede a análise; o leve não cria uma galeria dessas imagens</td></tr>
+        <tr><td>Dados escolhidos do Apple Saúde</td><td>Evitar digitação e manter registros integrados</td><td>Lidos com permissão do iPhone. Quando incorporados ao histórico, seguem a mesma regra dos registros: aparelho e, se ligado, backup</td></tr>
+        <tr><td>Eventos técnicos pseudonimizados, versão, plataforma e contexto limitado</td><td>Medir estabilidade, uso de recursos e conclusão de fluxos</td><td>No serviço de analytics, sem nome, e-mail, peso, dose, efeito ou foto</td></tr>
+        <tr><td>Produto adquirido, status e identificador de assinatura</td><td>Ativar, validar e restaurar assinatura</td><td>Apple ou Google e RevenueCat; o leve não recebe dados completos do cartão</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h2>3. Onde os dados ficam</h2>
-  <p><strong>Por padrão, tudo fica no seu aparelho.</strong> Peso, doses, efeitos, rotina e fotos ficam guardados apenas no celular, sem cópia em servidor. Se você desinstalar o app sem fazer backup, esses dados somem - nem nós conseguimos recuperar.</p>
-  <p>Saem do aparelho apenas duas coisas: os <strong>eventos anônimos de uso</strong>, que não contêm dado de saúde; e, <strong>se e enquanto você ligar</strong>, os dados da pesquisa. Ambos ficam em provedor de nuvem contratado (Supabase), com criptografia em trânsito e em repouso, podendo haver transferência internacional com as salvaguardas do art. 33 da LGPD.</p>
-  <p>A <strong>foto do prato</strong> é enviada ao serviço de análise apenas no momento em que você pede a leitura, e não é armazenada por nós. As <strong>fotos de corpo nunca são enviadas</strong> a lugar nenhum.</p>
+  <h2>3. Bases legais e escolhas</h2>
+  <ul>
+    <li><strong>Funcionamento do serviço e conta:</strong> execução do contrato e procedimentos solicitados por você.</li>
+    <li><strong>Backup de saúde:</strong> consentimento específico e destacado para dados pessoais sensíveis. Criar a conta sem ligar o backup continua sendo possível.</li>
+    <li><strong>Analytics limitado:</strong> legítimo interesse em segurança, estabilidade e melhoria do produto, com minimização e sem dados de saúde nos eventos.</li>
+    <li><strong>Obrigações e defesa de direitos:</strong> cumprimento de dever legal ou regulatório e exercício regular de direitos, quando aplicável.</li>
+  </ul>
+  <p>Você pode negar ou revogar o consentimento do backup. A revogação impede novas sincronizações; para eliminar o que já está na nuvem, use a exclusão da conta ou solicite pelo canal de contato.</p>
 
-  <h2>4. Com quem o leve compartilha</h2>
-  <p>Somente com operadores necessários para o serviço funcionar (infraestrutura de nuvem, processamento de assinatura pelas lojas). Nunca há venda de dados. Autoridades públicas só mediante obrigação legal.</p>
+  <h2>4. Análise de refeição por IA</h2>
+  <p>A análise só ocorre quando você toca para analisar uma foto ou descrição. O pedido passa pela infraestrutura do leve e pelo Google Gemini para produzir a estimativa. Evite incluir pessoas, documentos ou informações desnecessárias na imagem ou no texto. O leve não usa esse conteúdo para publicidade ou pesquisa. Provedores podem manter registros técnicos ou de segurança conforme seus próprios termos e configurações de retenção.</p>
 
-  <h2>5. Consentimento</h2>
-  <p>Existem <strong>dois consentimentos separados</strong>, e um não depende do outro:</p>
-  <p><strong>a) Para o app funcionar.</strong> Os dados de saúde que você digita são tratados no seu aparelho para gerar seu plano, seus lembretes e seu relatório. Sem isso o app não tem função.</p>
-  <p><strong>b) Para a pesquisa.</strong> É opcional, <strong>nasce desligado</strong> e fica em Perfil &gt; Dados e privacidade &gt; Ajudar na pesquisa. Ligado, sobem peso, doses, efeitos, proteína, água e sono, ligados a um identificador aleatório do aparelho - <strong>sem nome, sem e-mail, sem fotos</strong>. A finalidade é estudar como o tratamento com GLP-1 funciona na vida real. <strong>Recusar não tira nenhuma funcionalidade</strong>: o app continua exatamente igual.</p>
-  <p>Você pode <strong>revogar quando quiser</strong>. Desligar interrompe novos envios na hora, e o botão <em>Apagar meus dados da pesquisa</em> remove o que já foi enviado. Guardamos qual versão deste texto você aceitou e quando.</p>
+  <h2>5. Compartilhamento e operadores</h2>
+  <p>Compartilhamos somente o necessário com fornecedores que prestam partes do serviço:</p>
+  <ul>
+    <li><strong><a href="https://supabase.com/privacy">Supabase</a>:</strong> conta, autenticação, banco e backup opcional.</li>
+    <li><strong><a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> e <a href="https://policies.google.com/privacy">Google Gemini</a>:</strong> trânsito e análise solicitada de refeição.</li>
+    <li><strong><a href="https://www.revenuecat.com/privacy/">RevenueCat</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a> e <a href="https://policies.google.com/privacy">Google</a>:</strong> assinatura, compra e restauração.</li>
+    <li><strong>Apple Saúde:</strong> integração controlada pelas permissões do iPhone.</li>
+  </ul>
+  <p>Esses fornecedores podem processar dados fora do Brasil. Nesses casos, adotamos os mecanismos contratuais e de segurança aplicáveis e limitamos os dados à finalidade do serviço. Também poderemos compartilhar informações quando houver obrigação legal, ordem válida ou necessidade de proteger direitos e segurança.</p>
 
-  <h2>6. Seus direitos (art. 18 da LGPD)</h2>
-  <p>Confirmação de tratamento, acesso, correção, anonimização, portabilidade, eliminação, informação sobre compartilhamentos e revisão de decisões automatizadas. É só pedir pelo contato acima - resposta em até 15 dias. Você também pode reclamar à ANPD.</p>
+  <h2>6. Retenção e exclusão</h2>
+  <ul>
+    <li><strong>No aparelho:</strong> até você apagar registros, recomeçar do zero, limpar o armazenamento ou desinstalar o app. A desinstalação e o comportamento de backups do sistema são controlados pelo aparelho e pela plataforma.</li>
+    <li><strong>Conta e backup:</strong> enquanto a conta ou o backup estiver ativo. Ao apagar a conta pelo app, os dados vinculados na nuvem são eliminados, salvo retenção mínima exigida por lei ou necessária para defesa de direitos.</li>
+    <li><strong>Eventos técnicos:</strong> por até 24 meses; depois devem ser eliminados ou agregados sem identificação do dispositivo.</li>
+    <li><strong>Compras:</strong> conforme os prazos da Apple, Google, RevenueCat e obrigações fiscais ou legais aplicáveis.</li>
+  </ul>
 
-  <h2>7. Por quanto tempo os dados ficam guardados</h2>
-  <p>No aparelho, enquanto você mantiver o app instalado - apagar o app apaga os dados. Na pesquisa, enquanto o consentimento estiver ligado; ao apagar, a remoção é imediata. Eventos anônimos de uso são mantidos por até 24 meses de forma agregada.</p>
+  <h2>7. Segurança</h2>
+  <p>Usamos controles como autenticação por código, armazenamento seguro da sessão, regras de acesso por usuário, comunicação criptografada e separação entre dados de saúde e eventos técnicos. Nenhum sistema é invulnerável. Em incidente com risco ou dano relevante, adotaremos as medidas e comunicações exigidas pela LGPD e pela ANPD.</p>
 
-  <h2>8. Segurança</h2>
-  <p>Criptografia em trânsito (TLS) e em repouso, acesso restrito, e princípio de coleta mínima - o leve só pede o que usa no cálculo do seu plano. Nenhum sistema é 100% seguro; incidente relevante será comunicado a você e à ANPD nos termos do art. 48.</p>
+  <h2>8. Seus direitos pela LGPD</h2>
+  <p>Você pode pedir confirmação e acesso, correção, informação sobre compartilhamento, portabilidade quando regulamentada e tecnicamente aplicável, anonimização, bloqueio ou eliminação nas hipóteses legais, revogação do consentimento, oposição quando cabível e revisão de decisão automatizada que afete seus interesses.</p>
+  <p>Os pedidos são gratuitos e devem ser enviados para <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>. Podemos confirmar sua identidade para proteger os dados. Responderemos de imediato quando possível; para declaração completa de acesso, a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm">LGPD</a> prevê até 15 dias. Outros pedidos seguirão os prazos legais ou regulamentares aplicáveis.</p>
 
   <h2>9. Crianças e adolescentes</h2>
-  <p>O leve é para maiores de 18 anos e não coleta dados de menores conscientemente.</p>
+  <p>O leve é destinado a maiores de 18 anos e não é projetado para coletar conscientemente dados de crianças ou adolescentes.</p>
 
-  <h2>10. Mudanças nesta política</h2>
-  <p>Atualizações ficam sempre nesta página, com a data de vigência no topo. Mudança relevante no tratamento de dados de saúde será avisada no app e, se necessário, pedirá novo consentimento.</p>
+  <h2>10. Decisões automatizadas</h2>
+  <p>O leve usa cálculos e IA para estimativas, tendências e sugestões informativas. Eles não substituem avaliação profissional e não produzem decisão médica, de crédito, emprego ou seguro. Você pode pedir explicação sobre os critérios usados e contestar resultados pelo canal de contato.</p>
 
-  <p class="foot">Documento padrão preparado para a fase de demonstração do produto. Antes da publicação nas lojas, recomenda-se revisão por advogado.</p>
+  <h2>11. Mudanças</h2>
+  <p>Podemos atualizar esta Política quando o produto, os fornecedores ou a lei mudarem. Alterações relevantes serão comunicadas de modo adequado. A versão e a data no início identificam o texto vigente.</p>
+
+  <h2>12. Contato e reclamação</h2>
+  <p>Fale primeiro com <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>. Se o pedido não for resolvido, você também pode <a href="https://www.gov.br/anpd/pt-br/canais_atendimento/cidadao-titular-de-dados/denuncia-peticao-de-titular-referente-lgpd">peticionar à Autoridade Nacional de Proteção de Dados</a> ou recorrer aos órgãos de defesa do consumidor.</p>
+
+  <footer>Documento do produto em fase de validação. Antes do lançamento comercial, a identificação completa do controlador, os contratos com operadores, os prazos operacionais e a revisão jurídica final devem ser confirmados.</footer>
 </main>
 </body>
 </html>
