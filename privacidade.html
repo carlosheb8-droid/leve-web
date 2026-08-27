@@ -4,102 +4,391 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
+  <meta name="robots" content="index,follow">
   <title>Política de Privacidade - leve</title>
   <style>
-    :root { color-scheme:light; --ink:#173f36; --text:#294840; --muted:#64766f; --line:#d9e7e1; --bg:#f4fbf7; --card:#fff; --accent:#0f7f5f; }
+    :root { color-scheme:light; --ink:#173f36; --text:#294840; --muted:#64766f; --line:#d9e7e1; --bg:#f4fbf7; --card:#fff; --accent:#0f7f5f; --warn:#a95b18; }
     * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    main { width:min(800px,calc(100% - 32px)); margin:40px auto; padding:clamp(24px,6vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; box-shadow:0 18px 50px rgba(23,63,54,.06); }
-    h1,h2 { color:var(--ink); line-height:1.2; letter-spacing:-.02em; }
-    h1 { font-size:clamp(32px,7vw,48px); margin:0 0 8px; }
-    h2 { font-size:21px; margin:36px 0 10px; }
-    p,li { max-width:72ch; }
-    ul { padding-left:22px; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+    main { width:min(820px,calc(100% - 32px)); margin:40px auto; padding:clamp(24px,6vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; box-shadow:0 18px 50px rgba(23,63,54,.06); }
+    h1,h2,h3 { color:var(--ink); line-height:1.2; letter-spacing:-.02em; }
+    h1 { font-size:clamp(32px,7vw,46px); margin:0 0 8px; }
+    h2 { font-size:21px; margin:38px 0 10px; }
+    h3 { font-size:17px; margin:22px 0 6px; }
+    p,li { max-width:74ch; }
+    ul,ol { padding-left:22px; }
+    li { margin:5px 0; }
     .meta,.note { color:var(--muted); }
-    .summary { margin:28px 0; padding:18px 20px; border-left:4px solid var(--accent); background:#eef8f3; border-radius:0 16px 16px 0; }
+    .meta { font-size:14px; }
+    .summary { margin:26px 0 8px; padding:18px 20px; border-left:4px solid var(--accent); background:#eef8f3; border-radius:0 16px 16px 0; }
+    .aviso { margin:22px 0; padding:16px 18px; border-left:4px solid var(--warn); background:#fdf3e9; border-radius:0 16px 16px 0; }
     .table { overflow-x:auto; margin:16px 0; }
-    table { width:100%; border-collapse:collapse; min-width:620px; font-size:14px; }
+    table { width:100%; border-collapse:collapse; min-width:640px; font-size:14.5px; }
     th,td { padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
-    th { color:var(--ink); background:#f5faf7; }
+    th { color:var(--ink); background:#f5faf7; font-weight:700; }
     a { color:var(--accent); }
-    footer { margin-top:42px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    .indice { margin:26px 0 0; padding:18px 20px; background:#f5faf7; border:1px solid var(--line); border-radius:18px; }
+    .indice ol { margin:8px 0 0; columns:2; column-gap:28px; }
+    @media (max-width:620px){ .indice ol { columns:1; } }
+    footer { margin-top:44px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    code { background:#f0f6f3; padding:1px 5px; border-radius:5px; font-size:14px; }
   </style>
 </head>
 <body>
 <main>
-  <p class="meta">leve - versão 3.0 - 26 de agosto de 2026</p>
+  <p class="meta">leve · versão 4.0 · vigente desde 26 de agosto de 2026</p>
   <h1>Política de Privacidade</h1>
-  <p class="summary"><strong>Em resumo:</strong> seus registros ficam no aparelho por padrão. O backup de dados de saúde é opcional e só começa após sua autorização. Fotos de progresso não são enviadas para o leve. Não vendemos seus dados, não exibimos anúncios e não usamos seus registros para pesquisa.</p>
 
-  <h2>1. Quem controla os dados</h2>
-  <p>O controlador é o responsável pelo aplicativo leve. O canal para privacidade, exercício de direitos e contato com o encarregado é <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.</p>
+  <p class="summary">
+    <strong>O essencial, em cinco linhas.</strong><br>
+    1. As <strong>fotos do seu corpo nunca saem do seu aparelho</strong>. Nem para nós, nem para ninguém.<br>
+    2. Os seus registros de saúde ficam no aparelho por padrão; a cópia na nuvem só existe se você ligar.<br>
+    3. Usamos os seus dados para operar o app, melhorar o produto e produzir estatísticas e pesquisa em formato agregado ou anonimizado.<br>
+    4. <strong>Não vendemos os seus dados</strong> e não compartilhamos dados de saúde para obter vantagem econômica.<br>
+    5. Você pode ver, corrigir, exportar e apagar tudo, a qualquer momento, dentro do app.
+  </p>
 
-  <h2>2. Dados tratados e onde ficam</h2>
+  <nav class="indice" aria-label="Índice">
+    <strong>Índice</strong>
+    <ol>
+      <li><a href="#controlador">Quem é o controlador</a></li>
+      <li><a href="#dados">Que dados tratamos</a></li>
+      <li><a href="#origem">De onde vêm os dados</a></li>
+      <li><a href="#finalidades">Para que usamos e com que base legal</a></li>
+      <li><a href="#fotos">Fotos: a regra e a exceção</a></li>
+      <li><a href="#ia">Inteligência artificial e decisões automatizadas</a></li>
+      <li><a href="#onde">Onde os dados ficam e por quanto tempo</a></li>
+      <li><a href="#compartilhamento">Com quem compartilhamos</a></li>
+      <li><a href="#internacional">Transferência internacional</a></li>
+      <li><a href="#direitos">Os seus direitos</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#criancas">Crianças e adolescentes</a></li>
+      <li><a href="#site">O site do leve</a></li>
+      <li><a href="#incidentes">Incidentes de segurança</a></li>
+      <li><a href="#mudancas">Mudanças nesta política</a></li>
+      <li><a href="#contato">Como falar conosco</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="controlador">1. Quem é o controlador</h2>
+  <p>
+    O <strong>leve</strong> é um aplicativo companheiro para pessoas em tratamento com medicamentos da classe GLP-1
+    (como Mounjaro, Ozempic, Wegovy, Saxenda, Victoza e Rybelsus, entre outros). Ele registra o tratamento,
+    o peso, a rotina e os efeitos, e devolve leituras sobre esses registros.
+  </p>
+  <p>
+    Para os efeitos da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais, a <strong>LGPD</strong>),
+    o <strong>controlador</strong> dos dados pessoais tratados no leve é o responsável pelo aplicativo,
+    contatável em <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>. O mesmo endereço é o canal
+    do <strong>encarregado pelo tratamento de dados pessoais</strong> (DPO), conforme o artigo 41 da LGPD.
+  </p>
+  <p>
+    Esta política se aplica ao aplicativo leve para iOS e Android, à versão web e ao site do leve.
+  </p>
+
+  <h2 id="dados">2. Que dados tratamos</h2>
+  <p>
+    Tratamos apenas o que é necessário para o app funcionar e para as finalidades descritas na seção 4.
+    Você não precisa criar conta nem informar nome para usar o leve.
+  </p>
+
+  <h3>2.1. Dados de saúde (dados pessoais sensíveis)</h3>
+  <p>
+    A LGPD classifica dados referentes à saúde como <strong>dados pessoais sensíveis</strong> (artigo 5º, II).
+    Tratamos os seguintes:
+  </p>
   <div class="table">
     <table>
-      <thead><tr><th>Dados</th><th>Finalidade</th><th>Onde ficam</th></tr></thead>
+      <thead><tr><th>Categoria</th><th>Exemplos</th></tr></thead>
       <tbody>
-        <tr><td>Perfil, tratamento, peso, alimentação, proteína, água, sono, atividade, efeitos e preferências</td><td>Personalizar o acompanhamento, formar histórico, mostrar tendências e gerar relatório</td><td>No aparelho. Também no backup da conta, somente se você ativá-lo</td></tr>
-        <tr><td>E-mail e identificador da conta</td><td>Enviar código de acesso, autenticar e vincular o backup</td><td>No provedor de conta e banco de dados</td></tr>
-        <tr><td>Fotos de progresso</td><td>Comparação visual privada</td><td>Somente no aparelho, fora do backup</td></tr>
-        <tr><td>Foto ou descrição de refeição</td><td>Gerar uma estimativa de alimentos e nutrientes</td><td>Enviada de forma transitória aos provedores de infraestrutura e IA quando você pede a análise; o leve não cria uma galeria dessas imagens</td></tr>
-        <tr><td>Dados escolhidos do Apple Saúde</td><td>Evitar digitação e manter registros integrados</td><td>Lidos com permissão do iPhone. Quando incorporados ao histórico, seguem a mesma regra dos registros: aparelho e, se ligado, backup</td></tr>
-        <tr><td>Eventos técnicos pseudonimizados, versão, plataforma e contexto limitado</td><td>Medir estabilidade, uso de recursos e conclusão de fluxos</td><td>No serviço de analytics, sem nome, e-mail, peso, dose, efeito ou foto</td></tr>
-        <tr><td>Produto adquirido, status e identificador de assinatura</td><td>Ativar, validar e restaurar assinatura</td><td>Apple ou Google e RevenueCat; o leve não recebe dados completos do cartão</td></tr>
+        <tr><td>Perfil de tratamento</td><td>medicamento em uso, dose, frequência, dia e horário da aplicação, data de início, histórico de escalonamento</td></tr>
+        <tr><td>Aplicações</td><td>data, hora, dose e local de aplicação de cada registro</td></tr>
+        <tr><td>Corpo</td><td>peso, altura, idade, sexo biológico, percentual estimado de gordura, peso inicial e meta de peso</td></tr>
+        <tr><td>Efeitos colaterais</td><td>náusea, refluxo, constipação, fadiga, tontura e outros, com intensidade e data</td></tr>
+        <tr><td>Rotina</td><td>proteína e alimentos registrados, água, sono, exercício e treino de força</td></tr>
+        <tr><td>Condições declaradas</td><td>condições de saúde e sinais de alerta informados no início, usados para adaptar o conteúdo e o relatório</td></tr>
+        <tr><td>Fotos de progresso</td><td>imagens do seu corpo, com a data · <strong>ficam somente no seu aparelho</strong> (seção 5)</td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>3. Bases legais e escolhas</h2>
+  <h3>2.2. Dados de uso do aplicativo</h3>
+  <div class="table">
+    <table>
+      <thead><tr><th>Categoria</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td>Eventos de uso</td><td>abertura do app, início e conclusão do cadastro inicial, exibição da tela de assinatura, toque em assinar, registro salvo, análise por IA, relatório gerado, semana fechada</td></tr>
+        <tr><td>Identificador do aparelho</td><td>um código aleatório gerado pelo próprio app, sem relação com o seu nome, e-mail, IDFA ou qualquer identificador de publicidade</td></tr>
+        <tr><td>Técnicos</td><td>versão do aplicativo e sistema operacional (iOS, Android ou web)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">
+    Os eventos de uso registram <strong>que</strong> algo aconteceu, não <strong>o que</strong> você registrou.
+    O evento "registro salvo" não carrega o seu peso, e o "análise por IA" não carrega a sua refeição.
+  </p>
+
+  <h3>2.3. Dados de assinatura</h3>
+  <p>
+    Quando você assina, a compra é processada pela <strong>App Store da Apple</strong> ou pelo
+    <strong>Google Play</strong>. Nós não recebemos, não vemos e não armazenamos o número do seu cartão,
+    dados bancários ou endereço de cobrança. Recebemos apenas o estado da assinatura (ativa, em teste,
+    cancelada ou expirada) e o identificador da transação, necessários para liberar o acesso.
+  </p>
+
+  <h3>2.4. Comunicação</h3>
+  <p>
+    Se você nos escrever, tratamos o seu e-mail e o conteúdo da mensagem para responder e manter o histórico
+    do atendimento.
+  </p>
+
+  <h2 id="origem">3. De onde vêm os dados</h2>
   <ul>
-    <li><strong>Funcionamento do serviço e conta:</strong> execução do contrato e procedimentos solicitados por você.</li>
-    <li><strong>Backup de saúde:</strong> consentimento específico e destacado para dados pessoais sensíveis. Criar a conta sem ligar o backup continua sendo possível.</li>
-    <li><strong>Analytics limitado:</strong> legítimo interesse em segurança, estabilidade e melhoria do produto, com minimização e sem dados de saúde nos eventos.</li>
-    <li><strong>Obrigações e defesa de direitos:</strong> cumprimento de dever legal ou regulatório e exercício regular de direitos, quando aplicável.</li>
+    <li><strong>De você</strong>, no cadastro inicial e em cada registro que faz no app.</li>
+    <li><strong>Do seu aparelho</strong>, para os dados técnicos e de uso descritos em 2.2.</li>
+    <li><strong>Do Apple Saúde ou do Google Health Connect</strong>, se e quando você autorizar expressamente
+      a conexão. A autorização é dada no sistema operacional, é sempre opcional, e pode ser revogada por lá
+      a qualquer momento. Enquanto não autorizada, nada é lido.</li>
+    <li><strong>Das lojas de aplicativo</strong>, para o estado da assinatura.</li>
   </ul>
-  <p>Você pode negar ou revogar o consentimento do backup. A revogação impede novas sincronizações; para eliminar o que já está na nuvem, use a exclusão da conta ou solicite pelo canal de contato.</p>
+  <p>Não compramos listas, não enriquecemos o seu perfil com dados de terceiros e não fazemos <em>scraping</em>.</p>
 
-  <h2>4. Análise de refeição por IA</h2>
-  <p>A análise só ocorre quando você toca para analisar uma foto ou descrição. O pedido passa pela infraestrutura do leve e pelo Google Gemini para produzir a estimativa. Evite incluir pessoas, documentos ou informações desnecessárias na imagem ou no texto. O leve não usa esse conteúdo para publicidade ou pesquisa. Provedores podem manter registros técnicos ou de segurança conforme seus próprios termos e configurações de retenção.</p>
+  <h2 id="finalidades">4. Para que usamos e com que base legal</h2>
+  <p>
+    A LGPD exige uma base legal para cada finalidade. Para dados sensíveis de saúde, as hipóteses são as do
+    artigo 11. A tabela abaixo diz, para cada finalidade, o que usamos e por quê.
+  </p>
+  <div class="table">
+    <table>
+      <thead><tr><th>Finalidade</th><th>Dados usados</th><th>Base legal</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Fazer o app funcionar: guardar os seus registros, calcular tendência, projeção, ritmo e leituras, montar o relatório para o seu médico e enviar lembretes que você ligou</td>
+          <td>saúde, perfil de tratamento, corpo, rotina</td>
+          <td>consentimento específico e destacado (LGPD, art. 11, I) e execução de contrato (art. 7º, V) para a parte não sensível</td>
+        </tr>
+        <tr>
+          <td>Estimar a proteína e os alimentos de uma refeição a partir de foto ou descrição</td>
+          <td>a imagem ou o texto que você envia naquele momento</td>
+          <td>consentimento (art. 11, I), manifestado no ato de usar o recurso</td>
+        </tr>
+        <tr>
+          <td>Manter a sua cópia de segurança e permitir a troca de aparelho</td>
+          <td>os seus registros, exceto fotos de progresso</td>
+          <td>consentimento (art. 11, I), dado ao ligar o backup</td>
+        </tr>
+        <tr>
+          <td><strong>Melhorar o leve</strong>: entender quais telas ajudam, onde as pessoas travam, o que corrigir e o que construir</td>
+          <td>eventos de uso, dados técnicos e, mediante o seu consentimento, os seus registros em formato agregado</td>
+          <td>consentimento (art. 11, I) para dados de saúde; legítimo interesse (art. 7º, IX) para eventos de uso e dados técnicos, sempre em formato que não identifica você</td>
+        </tr>
+        <tr>
+          <td><strong>Produzir estatísticas e pesquisa</strong> sobre tratamento com GLP-1: ritmo de perda, padrão de efeitos ao longo do ciclo, adesão, resposta por faixa de dose</td>
+          <td>registros de saúde <strong>agregados ou anonimizados</strong>, nunca fotos</td>
+          <td>consentimento específico (art. 11, I) e, quando os dados estiverem anonimizados, a LGPD deixa de se aplicar (art. 12)</td>
+        </tr>
+        <tr>
+          <td>Liberar e manter a assinatura, prevenir fraude e abuso</td>
+          <td>estado da assinatura, identificador do aparelho</td>
+          <td>execução de contrato (art. 7º, V) e legítimo interesse (art. 7º, IX)</td>
+        </tr>
+        <tr>
+          <td>Responder a você e manter o histórico do atendimento</td>
+          <td>e-mail e conteúdo da mensagem</td>
+          <td>legítimo interesse (art. 7º, IX)</td>
+        </tr>
+        <tr>
+          <td>Cumprir obrigação legal ou regulatória e defender direitos em processo</td>
+          <td>o mínimo necessário</td>
+          <td>art. 7º, II e VI; art. 11, II, "a" e "d"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h2>5. Compartilhamento e operadores</h2>
-  <p>Compartilhamos somente o necessário com fornecedores que prestam partes do serviço:</p>
+  <div class="aviso">
+    <strong>O que nunca fazemos.</strong> Não vendemos os seus dados. Não exibimos anúncios. Não usamos os seus
+    dados para publicidade direcionada, sua ou de terceiros. Não compartilhamos dados de saúde com o objetivo de
+    obter vantagem econômica, prática vedada pelo artigo 11, §4º, da LGPD. Não enviamos os seus dados para
+    seguradoras, planos de saúde, empregadores, farmacêuticas ou corretores de dados.
+  </div>
+
+  <h3>4.1. O seu consentimento é granular e reversível</h3>
+  <p>
+    O consentimento para o uso dos seus registros em melhoria de produto, estatísticas e pesquisa é
+    <strong>separado</strong> do consentimento para usar o app, é pedido de forma destacada e pode ser
+    <strong>retirado a qualquer momento</strong> em <em>Perfil › Ajustes › Dados</em>. Retirar o consentimento
+    não bloqueia o app e não apaga os seus registros do aparelho; interrompe o uso daquele dado para aquela
+    finalidade dali em diante, e apaga da nossa base o que ainda for identificável.
+  </p>
+
+  <h2 id="fotos">5. Fotos: a regra e a exceção</h2>
+  <h3>5.1. Fotos de progresso: nunca saem do aparelho</h3>
+  <p>
+    As fotos do seu corpo são gravadas <strong>exclusivamente no armazenamento do seu aparelho</strong>. Elas não
+    são enviadas para servidores do leve, não entram no backup em nuvem, não entram na exportação de dados para
+    pesquisa e não são usadas para treinar modelo nenhum. Se você apagar o app sem exportar, elas vão junto.
+    A cópia de segurança dessas imagens é responsabilidade sua, pelo backup do próprio iPhone ou Android.
+  </p>
+  <h3>5.2. Foto do prato: a única exceção, e é você quem dispara</h3>
+  <p>
+    Quando você usa o recurso de estimar a refeição por foto, aquela imagem específica é enviada, por conexão
+    criptografada, ao nosso serviço de análise e de lá ao provedor de inteligência artificial, apenas para
+    devolver a lista de alimentos e a estimativa de gramas. A imagem é usada para produzir essa resposta e
+    <strong>não é associada ao seu perfil nem armazenada por nós para outra finalidade</strong>. Se preferir não
+    enviar imagem alguma, o app aceita a descrição por texto, que segue o mesmo caminho.
+  </p>
+
+  <h2 id="ia">6. Inteligência artificial e decisões automatizadas</h2>
+  <p>
+    O leve usa cálculo automatizado para produzir tendência de peso, projeção de chegada à meta, leitura de
+    ritmo, correlações entre efeitos e ciclo da dose, e estimativas de alimentos. Essas leituras são
+    <strong>informativas</strong>: não são diagnóstico, não são prescrição e não substituem a avaliação de um
+    profissional de saúde.
+  </p>
+  <p>
+    Nenhuma dessas leituras produz efeito jurídico ou afeta os seus interesses de forma automatizada. Ainda
+    assim, na forma do artigo 20 da LGPD, você pode <strong>solicitar a revisão</strong> de qualquer leitura e
+    pedir explicação sobre os critérios usados, escrevendo para o contato da seção 16. O app já mostra, em cada
+    cartão de análise, como o número foi calculado.
+  </p>
+
+  <h2 id="onde">7. Onde os dados ficam e por quanto tempo</h2>
+  <div class="table">
+    <table>
+      <thead><tr><th>Dado</th><th>Onde fica</th><th>Por quanto tempo</th></tr></thead>
+      <tbody>
+        <tr><td>Registros de saúde e perfil</td><td>no seu aparelho; e em nuvem apenas se você ligar o backup</td><td>enquanto você usar o app; apagados imediatamente ao usar "Apagar tudo"</td></tr>
+        <tr><td>Fotos de progresso</td><td>somente no seu aparelho</td><td>até você apagar</td></tr>
+        <tr><td>Eventos de uso</td><td>banco de dados do leve (Supabase)</td><td>até 24 meses</td></tr>
+        <tr><td>Foto ou texto do prato</td><td>trânsito para o serviço de análise</td><td>o tempo da requisição; não guardamos cópia</td></tr>
+        <tr><td>Dados para estatística e pesquisa</td><td>banco de dados do leve, agregados ou anonimizados</td><td>indeterminado enquanto anonimizados; se identificáveis, até você retirar o consentimento</td></tr>
+        <tr><td>Estado da assinatura</td><td>lojas de aplicativo e nossos registros</td><td>pelo prazo legal de guarda fiscal e contábil</td></tr>
+        <tr><td>Mensagens de suporte</td><td>caixa de e-mail</td><td>até 5 anos, para prova de atendimento</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Encerrado o prazo ou a finalidade, os dados são eliminados ou anonimizados, salvo as hipóteses de guarda
+    previstas no artigo 16 da LGPD.
+  </p>
+
+  <h2 id="compartilhamento">8. Com quem compartilhamos</h2>
+  <p>
+    Compartilhamos o mínimo necessário, e apenas com <strong>operadores</strong> que tratam dados por nossa
+    conta e ordem, sob contrato e com obrigação de confidencialidade e segurança:
+  </p>
+  <div class="table">
+    <table>
+      <thead><tr><th>Operador</th><th>Para quê</th><th>Que dado recebe</th></tr></thead>
+      <tbody>
+        <tr><td>Supabase</td><td>banco de dados e backup opcional</td><td>eventos de uso; e os seus registros, se você ligar o backup</td></tr>
+        <tr><td>Cloudflare</td><td>servidor que intermedeia a análise de refeição</td><td>a foto ou o texto do prato, em trânsito</td></tr>
+        <tr><td>Google (Gemini)</td><td>estimativa de alimentos a partir da foto ou do texto</td><td>a foto ou o texto do prato</td></tr>
+        <tr><td>Apple e Google</td><td>distribuição do app, assinatura e notificações</td><td>estado da assinatura e identificadores da loja</td></tr>
+        <tr><td>Expo</td><td>infraestrutura de build e entrega de atualizações</td><td>dados técnicos do aplicativo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Também podemos compartilhar dados quando houver <strong>ordem judicial ou requisição de autoridade
+    competente</strong>, ou em caso de reorganização societária, hipótese em que o adquirente fica sujeito a
+    esta mesma política.
+  </p>
+
+  <h2 id="internacional">9. Transferência internacional</h2>
+  <p>
+    Alguns operadores mantêm servidores fora do Brasil, inclusive nos Estados Unidos e na União Europeia.
+    Nesses casos a transferência é feita com base no artigo 33 da LGPD, apoiada em cláusulas contratuais que
+    impõem ao operador padrão de proteção compatível com a lei brasileira. Você pode pedir informação sobre as
+    salvaguardas aplicadas pelo contato da seção 16.
+  </p>
+
+  <h2 id="direitos">10. Os seus direitos</h2>
+  <p>O artigo 18 da LGPD garante a você, a qualquer momento e gratuitamente:</p>
   <ul>
-    <li><strong><a href="https://supabase.com/privacy">Supabase</a>:</strong> conta, autenticação, banco e backup opcional.</li>
-    <li><strong><a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> e <a href="https://policies.google.com/privacy">Google Gemini</a>:</strong> trânsito e análise solicitada de refeição.</li>
-    <li><strong><a href="https://www.revenuecat.com/privacy/">RevenueCat</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a> e <a href="https://policies.google.com/privacy">Google</a>:</strong> assinatura, compra e restauração.</li>
-    <li><strong>Apple Saúde:</strong> integração controlada pelas permissões do iPhone.</li>
+    <li><strong>Confirmação e acesso</strong>: saber se tratamos dados seus e obter cópia deles.</li>
+    <li><strong>Correção</strong>: corrigir dado incompleto, inexato ou desatualizado.</li>
+    <li><strong>Anonimização, bloqueio ou eliminação</strong> de dado desnecessário, excessivo ou tratado em desconformidade.</li>
+    <li><strong>Portabilidade</strong> a outro fornecedor, mediante requisição expressa.</li>
+    <li><strong>Eliminação</strong> dos dados tratados com base no seu consentimento.</li>
+    <li><strong>Informação</strong> sobre com quem compartilhamos dados.</li>
+    <li><strong>Informação</strong> sobre a possibilidade de não consentir e as consequências disso.</li>
+    <li><strong>Revogação do consentimento</strong>, a qualquer tempo.</li>
+    <li><strong>Oposição</strong> a tratamento fundado em legítimo interesse.</li>
+    <li><strong>Revisão</strong> de decisões automatizadas, na forma do artigo 20.</li>
   </ul>
-  <p>Esses fornecedores podem processar dados fora do Brasil. Nesses casos, adotamos os mecanismos contratuais e de segurança aplicáveis e limitamos os dados à finalidade do serviço. Também poderemos compartilhar informações quando houver obrigação legal, ordem válida ou necessidade de proteger direitos e segurança.</p>
-
-  <h2>6. Retenção e exclusão</h2>
+  <h3>10.1. Como exercer, sem pedir licença a ninguém</h3>
+  <p>A maior parte está dentro do app, e não depende de nós:</p>
   <ul>
-    <li><strong>No aparelho:</strong> até você apagar registros, recomeçar do zero, limpar o armazenamento ou desinstalar o app. A desinstalação e o comportamento de backups do sistema são controlados pelo aparelho e pela plataforma.</li>
-    <li><strong>Conta e backup:</strong> enquanto a conta ou o backup estiver ativo. Ao apagar a conta pelo app, os dados vinculados na nuvem são eliminados, salvo retenção mínima exigida por lei ou necessária para defesa de direitos.</li>
-    <li><strong>Eventos técnicos:</strong> por até 24 meses; depois devem ser eliminados ou agregados sem identificação do dispositivo.</li>
-    <li><strong>Compras:</strong> conforme os prazos da Apple, Google, RevenueCat e obrigações fiscais ou legais aplicáveis.</li>
+    <li><strong>Ver e corrigir</strong>: qualquer registro é editável na própria tela em que foi criado.</li>
+    <li><strong>Exportar</strong>: <em>Perfil › Ajustes › Dados › Backup</em> gera um arquivo com todos os seus registros.</li>
+    <li><strong>Apagar tudo</strong>: <em>Perfil › Ajustes › Dados › Recomeçar</em> apaga registros, fotos e perfil do aparelho.</li>
+    <li><strong>Retirar o consentimento de pesquisa</strong>: <em>Perfil › Ajustes › Dados</em>.</li>
+    <li><strong>Apagar a conta e o que estiver na nuvem</strong>: <em>Perfil › Ajustes › Dados › Apagar conta</em>.</li>
   </ul>
+  <p>
+    Para qualquer outro pedido, escreva para <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.
+    Respondemos em até <strong>15 dias</strong>. Podemos pedir informação adicional para confirmar que o pedido
+    é mesmo seu, o que é uma medida de segurança, não um obstáculo.
+  </p>
+  <p>
+    Se você não ficar satisfeito com a nossa resposta, pode apresentar reclamação à
+    <a href="https://www.gov.br/anpd/" target="_blank" rel="noopener">Autoridade Nacional de Proteção de Dados (ANPD)</a>
+    ou aos órgãos de defesa do consumidor.
+  </p>
 
-  <h2>7. Segurança</h2>
-  <p>Usamos controles como autenticação por código, armazenamento seguro da sessão, regras de acesso por usuário, comunicação criptografada e separação entre dados de saúde e eventos técnicos. Nenhum sistema é invulnerável. Em incidente com risco ou dano relevante, adotaremos as medidas e comunicações exigidas pela LGPD e pela ANPD.</p>
+  <h2 id="seguranca">11. Segurança</h2>
+  <ul>
+    <li>Todo tráfego entre o app e os nossos serviços é <strong>criptografado em trânsito</strong> (HTTPS/TLS).</li>
+    <li>Os dados guardados em nuvem ficam <strong>criptografados em repouso</strong> pelo provedor.</li>
+    <li>O acesso à base é restrito, com credenciais individuais e registro de acesso.</li>
+    <li>As chaves de serviços de terceiros ficam em cofre no servidor, nunca no aplicativo.</li>
+    <li>O app coleta o mínimo: não pede nome, não pede documento e não exige conta para funcionar.</li>
+  </ul>
+  <p class="note">
+    Nenhum sistema é infalível. Se você identificar uma falha de segurança, escreva para o contato da seção 16
+    antes de divulgá-la publicamente, e trataremos o relato com prioridade.
+  </p>
 
-  <h2>8. Seus direitos pela LGPD</h2>
-  <p>Você pode pedir confirmação e acesso, correção, informação sobre compartilhamento, portabilidade quando regulamentada e tecnicamente aplicável, anonimização, bloqueio ou eliminação nas hipóteses legais, revogação do consentimento, oposição quando cabível e revisão de decisão automatizada que afete seus interesses.</p>
-  <p>Os pedidos são gratuitos e devem ser enviados para <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>. Podemos confirmar sua identidade para proteger os dados. Responderemos de imediato quando possível; para declaração completa de acesso, a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm">LGPD</a> prevê até 15 dias. Outros pedidos seguirão os prazos legais ou regulamentares aplicáveis.</p>
+  <h2 id="criancas">12. Crianças e adolescentes</h2>
+  <p>
+    O leve é destinado a <strong>maiores de 18 anos</strong>. Não coletamos intencionalmente dados de crianças
+    ou adolescentes. Se identificarmos que um dado foi fornecido por menor de 18 anos, ele será eliminado.
+    Se você é responsável e acredita que isso ocorreu, escreva para o contato da seção 16.
+  </p>
 
-  <h2>9. Crianças e adolescentes</h2>
-  <p>O leve é destinado a maiores de 18 anos e não é projetado para coletar conscientemente dados de crianças ou adolescentes.</p>
+  <h2 id="site">13. O site do leve</h2>
+  <p>
+    O site institucional e a demonstração web não usam cookies de publicidade, não usam pixels de rede social e
+    não fazem rastreamento entre sites. A demonstração web guarda os seus registros apenas no armazenamento
+    local do navegador, no seu próprio computador.
+  </p>
 
-  <h2>10. Decisões automatizadas</h2>
-  <p>O leve usa cálculos e IA para estimativas, tendências e sugestões informativas. Eles não substituem avaliação profissional e não produzem decisão médica, de crédito, emprego ou seguro. Você pode pedir explicação sobre os critérios usados e contestar resultados pelo canal de contato.</p>
+  <h2 id="incidentes">14. Incidentes de segurança</h2>
+  <p>
+    Na hipótese de incidente de segurança que possa acarretar risco ou dano relevante a você, comunicaremos a
+    ANPD e você, em prazo razoável, na forma do artigo 48 da LGPD, informando a natureza dos dados afetados,
+    os riscos envolvidos e as medidas adotadas.
+  </p>
 
-  <h2>11. Mudanças</h2>
-  <p>Podemos atualizar esta Política quando o produto, os fornecedores ou a lei mudarem. Alterações relevantes serão comunicadas de modo adequado. A versão e a data no início identificam o texto vigente.</p>
+  <h2 id="mudancas">15. Mudanças nesta política</h2>
+  <p>
+    Podemos atualizar esta política para refletir mudanças no app ou na lei. A versão vigente fica sempre nesta
+    página, com data no topo. Se a mudança for relevante, avisaremos dentro do aplicativo antes de ela passar a
+    valer, e, quando a lei exigir, pediremos o seu consentimento de novo.
+  </p>
 
-  <h2>12. Contato e reclamação</h2>
-  <p>Fale primeiro com <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>. Se o pedido não for resolvido, você também pode <a href="https://www.gov.br/anpd/pt-br/canais_atendimento/cidadao-titular-de-dados/denuncia-peticao-de-titular-referente-lgpd">peticionar à Autoridade Nacional de Proteção de Dados</a> ou recorrer aos órgãos de defesa do consumidor.</p>
+  <h2 id="contato">16. Como falar conosco</h2>
+  <p>
+    Privacidade, exercício de direitos e contato com o encarregado:
+    <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.
+  </p>
 
-  <footer>Documento do produto em fase de validação. Antes do lançamento comercial, a identificação completa do controlador, os contratos com operadores, os prazos operacionais e a revisão jurídica final devem ser confirmados.</footer>
+  <footer>
+    <p>leve · Política de Privacidade · versão 4.0 · 26 de agosto de 2026.</p>
+    <p><a href="./termos.html">Termos de Uso</a></p>
+  </footer>
 </main>
 </body>
 </html>

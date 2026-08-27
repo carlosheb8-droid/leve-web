@@ -4,83 +4,276 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Termos de uso - leve</title>
+  <meta name="robots" content="index,follow">
+  <title>Termos de Uso - leve</title>
   <style>
-    :root { color-scheme: light; --ink:#173f36; --text:#294840; --muted:#64766f; --line:#d9e7e1; --bg:#f4fbf7; --card:#fff; --accent:#0f7f5f; }
+    :root { color-scheme:light; --ink:#173f36; --text:#294840; --muted:#64766f; --line:#d9e7e1; --bg:#f4fbf7; --card:#fff; --accent:#0f7f5f; --warn:#a95b18; }
     * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    main { width:min(760px,calc(100% - 32px)); margin:40px auto; padding:clamp(24px,6vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; box-shadow:0 18px 50px rgba(23,63,54,.06); }
-    h1,h2 { color:var(--ink); line-height:1.2; letter-spacing:-.02em; }
-    h1 { font-size:clamp(32px,7vw,48px); margin:0 0 8px; }
-    h2 { font-size:21px; margin:36px 0 10px; }
-    p,li { max-width:68ch; }
-    ul { padding-left:22px; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+    main { width:min(820px,calc(100% - 32px)); margin:40px auto; padding:clamp(24px,6vw,56px); background:var(--card); border:1px solid var(--line); border-radius:28px; box-shadow:0 18px 50px rgba(23,63,54,.06); }
+    h1,h2,h3 { color:var(--ink); line-height:1.2; letter-spacing:-.02em; }
+    h1 { font-size:clamp(32px,7vw,46px); margin:0 0 8px; }
+    h2 { font-size:21px; margin:38px 0 10px; }
+    h3 { font-size:17px; margin:22px 0 6px; }
+    p,li { max-width:74ch; }
+    ul,ol { padding-left:22px; }
+    li { margin:5px 0; }
     .meta,.note { color:var(--muted); }
-    .summary { margin:28px 0; padding:18px 20px; border-left:4px solid var(--accent); background:#eef8f3; border-radius:0 16px 16px 0; }
+    .meta { font-size:14px; }
+    .summary { margin:26px 0 8px; padding:18px 20px; border-left:4px solid var(--accent); background:#eef8f3; border-radius:0 16px 16px 0; }
+    .aviso { margin:22px 0; padding:18px 20px; border-left:4px solid var(--warn); background:#fdf3e9; border-radius:0 16px 16px 0; }
+    .table { overflow-x:auto; margin:16px 0; }
+    table { width:100%; border-collapse:collapse; min-width:560px; font-size:14.5px; }
+    th,td { padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--ink); background:#f5faf7; font-weight:700; }
     a { color:var(--accent); }
-    footer { margin-top:42px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    .indice { margin:26px 0 0; padding:18px 20px; background:#f5faf7; border:1px solid var(--line); border-radius:18px; }
+    .indice ol { margin:8px 0 0; columns:2; column-gap:28px; }
+    @media (max-width:620px){ .indice ol { columns:1; } }
+    footer { margin-top:44px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
   </style>
 </head>
 <body>
 <main>
-  <p class="meta">leve - versão 2.0 - 26 de agosto de 2026</p>
-  <h1>Termos de uso</h1>
-  <p class="summary">O leve é um aplicativo de organização e acompanhamento pessoal do tratamento. Ele não substitui médico, nutricionista, farmacêutico, diagnóstico, prescrição ou atendimento de urgência.</p>
+  <p class="meta">leve · versão 4.0 · vigente desde 26 de agosto de 2026</p>
+  <h1>Termos de Uso</h1>
 
-  <h2>1. Aceitação e responsável</h2>
-  <p>Ao usar o leve, você concorda com estes Termos e com a <a href="privacidade.html">Política de Privacidade</a>. O serviço é operado pelo responsável pelo aplicativo leve, contatável em <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.</p>
+  <p class="summary">
+    <strong>O essencial, em quatro linhas.</strong><br>
+    1. O leve <strong>não é um dispositivo médico</strong> e não substitui o seu médico. Ele organiza e mostra os seus registros.<br>
+    2. Você precisa ter <strong>18 anos ou mais</strong>.<br>
+    3. A assinatura <strong>renova sozinha</strong> até você cancelar, e o cancelamento é feito na loja do seu celular.<br>
+    4. Os seus dados são seus. Você exporta e apaga quando quiser.
+  </p>
 
-  <h2>2. Para que o leve serve</h2>
-  <p>O leve ajuda a registrar e visualizar informações como medicamento, aplicações, peso, alimentação, proteína, água, sono, atividade, efeitos percebidos, fotos de progresso, lembretes e relatórios para consulta. Algumas leituras são estimativas baseadas nos dados informados.</p>
+  <nav class="indice" aria-label="Índice">
+    <strong>Índice</strong>
+    <ol>
+      <li><a href="#aceitacao">Aceitação</a></li>
+      <li><a href="#oque">O que o leve é</a></li>
+      <li><a href="#naoe">O que o leve não é</a></li>
+      <li><a href="#elegibilidade">Quem pode usar</a></li>
+      <li><a href="#conta">Conta e aparelho</a></li>
+      <li><a href="#assinatura">Assinatura, preço e renovação</a></li>
+      <li><a href="#arrependimento">Cancelamento e arrependimento</a></li>
+      <li><a href="#uso">Uso aceitável</a></li>
+      <li><a href="#conteudo">Os seus registros</a></li>
+      <li><a href="#ia">Recursos de inteligência artificial</a></li>
+      <li><a href="#propriedade">Propriedade intelectual</a></li>
+      <li><a href="#disponibilidade">Disponibilidade e mudanças</a></li>
+      <li><a href="#responsabilidade">Responsabilidade</a></li>
+      <li><a href="#encerramento">Encerramento</a></li>
+      <li><a href="#alteracoes">Alterações destes termos</a></li>
+      <li><a href="#lei">Lei aplicável e foro</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ol>
+  </nav>
 
-  <h2>3. Limites de saúde</h2>
+  <h2 id="aceitacao">1. Aceitação</h2>
+  <p>
+    Estes Termos de Uso regem o acesso e o uso do aplicativo <strong>leve</strong>, da sua versão web e do site
+    do leve (em conjunto, o "Serviço"). Ao criar o seu plano, tocar em continuar na tela de aceite ou usar o
+    Serviço de qualquer forma, você declara que <strong>leu, entendeu e concorda</strong> com estes termos e com
+    a <a href="./privacidade.html">Política de Privacidade</a>, que é parte integrante deste documento.
+  </p>
+  <p>Se você não concordar com qualquer ponto, não use o Serviço.</p>
+
+  <h2 id="oque">2. O que o leve é</h2>
+  <p>
+    O leve é um <strong>aplicativo de bem-estar e organização pessoal</strong> para quem faz tratamento com
+    medicamentos da classe GLP-1. Ele permite registrar aplicações, peso, efeitos, alimentação, água, sono e
+    exercício, e devolve leituras calculadas sobre esses registros: tendência de peso, projeção de chegada à
+    meta, ritmo de perda, padrão de efeitos ao longo do ciclo da dose e um relatório para levar à consulta.
+  </p>
+
+  <h2 id="naoe">3. O que o leve não é</h2>
+  <div class="aviso">
+    <p><strong>Leia esta seção inteira. Ela é a mais importante do documento.</strong></p>
+    <ul>
+      <li>O leve <strong>não é um dispositivo médico</strong> e não foi submetido a registro sanitário como tal.</li>
+      <li>O leve <strong>não faz diagnóstico</strong>, não prescreve, não indica medicamento, não altera dose e
+        não recomenda iniciar, aumentar, reduzir ou interromper qualquer tratamento.</li>
+      <li>As informações apresentadas — inclusive projeções, faixas, correlações, orientações de bula e o
+        relatório — são <strong>de caráter informativo e educacional</strong>, baseadas nos dados que
+        <em>você</em> registrou, e podem estar erradas se os registros estiverem incompletos ou incorretos.</li>
+      <li>O leve <strong>não substitui</strong> a avaliação, o acompanhamento e a orientação de médico,
+        nutricionista, farmacêutico ou qualquer profissional de saúde habilitado.</li>
+      <li><strong>Nunca</strong> mude a sua dose, o seu horário ou o seu tratamento com base no que o app mostrar.
+        Fale com quem prescreveu.</li>
+    </ul>
+    <p>
+      <strong>Emergência.</strong> Se você sentir dor abdominal intensa e persistente, vômito que não para,
+      sinais de desidratação, falta de ar, inchaço no rosto ou na garganta, batimento acelerado, confusão mental,
+      desmaio ou qualquer sintoma grave, <strong>procure atendimento médico imediatamente</strong> ou ligue para
+      o SAMU (192). O leve não é canal de emergência, não monitora você em tempo real e ninguém do outro lado
+      está lendo os seus registros.
+    </p>
+  </div>
+
+  <h2 id="elegibilidade">4. Quem pode usar</h2>
+  <p>
+    O Serviço é destinado a pessoas com <strong>18 anos ou mais</strong>, plenamente capazes. Ao usar o leve,
+    você declara que atende a esse requisito. O leve não é destinado a gestantes, lactantes ou pessoas com
+    contraindicação ao uso de GLP-1 sem acompanhamento profissional; o app pode adaptar conteúdo a partir do que
+    você informar, mas essa adaptação não é avaliação clínica.
+  </p>
+
+  <h2 id="conta">5. Conta e aparelho</h2>
+  <p>
+    O leve funciona <strong>sem conta e sem senha</strong>: os seus registros ficam no aparelho. Se você ligar o
+    backup em nuvem, passamos a manter uma cópia associada a um identificador, e você é responsável por manter o
+    acesso ao seu e-mail e ao seu aparelho. Você é responsável pela veracidade do que registra e por manter o seu
+    aparelho protegido.
+  </p>
+
+  <h2 id="assinatura">6. Assinatura, preço e renovação</h2>
+  <h3>6.1. O que é pago</h3>
+  <p>
+    O leve é oferecido por assinatura. Os planos, valores e eventual período de teste vigentes são exibidos
+    <strong>dentro do aplicativo</strong>, antes da confirmação da compra, e prevalecem sobre qualquer valor
+    citado em material de divulgação.
+  </p>
+  <h3>6.2. Como a cobrança funciona</h3>
   <ul>
-    <li>O conteúdo é educativo e de organização pessoal, não orientação médica individual.</li>
-    <li>Estimativas de peso, ritmo, nível do medicamento, calorias e nutrientes podem estar incorretas ou incompletas.</li>
-    <li>Não altere dose, frequência ou tratamento por causa do aplicativo. Siga a prescrição e a bula aplicável.</li>
-    <li>Em sintomas intensos, piora súbita ou emergência, procure atendimento de saúde.</li>
+    <li>A compra é processada pela <strong>App Store</strong> (Apple) ou pelo <strong>Google Play</strong>, e
+      cobrada na forma de pagamento cadastrada por você naquela loja.</li>
+    <li>A assinatura é de <strong>renovação automática</strong>: ela se renova pelo mesmo período, ao preço
+      então vigente, até que você cancele.</li>
+    <li>A renovação é cobrada nas <strong>24 horas anteriores</strong> ao fim do período em curso, conforme as
+      regras da loja.</li>
+    <li>Se houver <strong>período de teste gratuito</strong>, ele termina automaticamente e a cobrança começa,
+      salvo cancelamento com pelo menos <strong>24 horas de antecedência</strong> do fim do teste. Ao assinar
+      durante o teste, a parte não utilizada do teste é perdida.</li>
+    <li>Mudanças de preço são comunicadas com antecedência pela loja e só valem para os períodos seguintes.
+      Você pode cancelar antes que passem a valer.</li>
+  </ul>
+  <h3>6.3. Como cancelar</h3>
+  <p>
+    O cancelamento é feito <strong>na loja</strong>, não conosco: em <em>Ajustes › [seu nome] › Assinaturas</em>
+    no iPhone, ou em <em>Google Play › Pagamentos e assinaturas</em> no Android. O acesso continua até o fim do
+    período já pago. Apagar o aplicativo <strong>não cancela</strong> a assinatura.
+  </p>
+
+  <h2 id="arrependimento">7. Cancelamento e arrependimento</h2>
+  <p>
+    Nos termos do <strong>artigo 49 do Código de Defesa do Consumidor</strong>, por se tratar de contratação
+    fora do estabelecimento comercial, você pode desistir da compra em até <strong>7 (sete) dias corridos</strong>
+    contados da contratação, com devolução integral do valor pago. Como o pagamento é processado pela Apple ou
+    pelo Google, o pedido de reembolso deve ser feito diretamente à loja correspondente, que executa a devolução.
+    Se você tiver dificuldade nesse caminho, escreva para nós e ajudamos com o encaminhamento.
+  </p>
+
+  <h2 id="uso">8. Uso aceitável</h2>
+  <p>Ao usar o Serviço, você concorda em não:</p>
+  <ul>
+    <li>usar o leve para finalidade ilícita, ou de forma que viole direito de terceiro;</li>
+    <li>tentar acessar áreas, contas ou dados que não sejam seus;</li>
+    <li>fazer engenharia reversa, descompilar, extrair código, contornar limites técnicos ou o controle de assinatura;</li>
+    <li>usar robôs, raspagem ou automação para extrair conteúdo ou sobrecarregar o Serviço;</li>
+    <li>revender, sublicenciar ou explorar comercialmente o Serviço sem autorização escrita;</li>
+    <li>enviar conteúdo ilegal, ofensivo ou que não seja seu no recurso de foto de refeição;</li>
+    <li>apresentar o leve, ou informação obtida nele, como orientação médica a terceiros.</li>
   </ul>
 
-  <h2>4. Idade e informações corretas</h2>
-  <p>O leve é destinado a pessoas com 18 anos ou mais. Você é responsável por informar dados verdadeiros e por revisar registros e estimativas antes de usá-los ou compartilhá-los com profissionais.</p>
+  <h2 id="conteudo">9. Os seus registros</h2>
+  <p>
+    Os registros que você cria são <strong>seus</strong>. Nós não reivindicamos propriedade sobre eles. Você nos
+    concede apenas a licença necessária para operar o Serviço para você: armazenar, processar e exibir os seus
+    dados nas telas do app, e usá-los nas finalidades e bases legais descritas na
+    <a href="./privacidade.html">Política de Privacidade</a>.
+  </p>
+  <p>
+    <strong>As fotos do seu corpo não saem do seu aparelho</strong>, não são enviadas para nós e não estão
+    cobertas por licença alguma. Você pode exportar e apagar os seus dados a qualquer momento pelas ferramentas
+    do próprio app.
+  </p>
 
-  <h2>5. Conta, aparelho e backup</h2>
-  <p>A conta é opcional e usa código enviado por e-mail. Sem backup, os registros ficam no aparelho e podem ser perdidos se o app for apagado, o aparelho for perdido ou o armazenamento for limpo. O backup de dados de saúde só é ativado após autorização específica. Você deve manter acesso seguro ao seu e-mail e ao aparelho.</p>
+  <h2 id="ia">10. Recursos de inteligência artificial</h2>
+  <p>
+    A estimativa de alimentos por foto ou por texto usa um provedor externo de inteligência artificial. O
+    resultado é uma <strong>estimativa</strong>: pode errar o alimento, o preparo e a quantidade, e deve ser
+    conferido e corrigido por você antes de ser aceito. O app permite editar qualquer item antes de salvar. As
+    estimativas não são aconselhamento nutricional.
+  </p>
+  <p>
+    O recurso tem <strong>limite de uso por período</strong>, informado no app, para manter o custo do serviço
+    sustentável. O limite pode ser ajustado, com aviso prévio no aplicativo.
+  </p>
 
-  <h2>6. Fotos e análise por inteligência artificial</h2>
-  <p>Fotos de progresso ficam no aparelho. Ao pedir a análise de uma refeição, a foto ou descrição é enviada a provedores de infraestrutura e inteligência artificial para produzir uma estimativa. O resultado deve ser conferido e pode ser corrigido antes do registro. Não envie rostos, documentos, telas, nomes ou outros dados que não sejam necessários para analisar a refeição.</p>
+  <h2 id="propriedade">11. Propriedade intelectual</h2>
+  <p>
+    O nome leve, o logotipo, a interface, os textos, os ícones, as ilustrações, a organização das telas, os
+    métodos de cálculo e o software são protegidos por direitos de propriedade intelectual e pertencem ao
+    titular do Serviço. Estes termos concedem a você uma licença <strong>pessoal, limitada, revogável, não
+    exclusiva e intransferível</strong> de uso do aplicativo, enquanto a sua assinatura estiver ativa e você
+    cumprir estes termos. Nada aqui transfere titularidade.
+  </p>
+  <p class="note">
+    Marcas de medicamentos citadas no app pertencem aos seus respectivos titulares e são usadas apenas para
+    identificar o tratamento que você informou. O leve não tem relação, patrocínio ou vínculo com qualquer
+    laboratório farmacêutico.
+  </p>
 
-  <h2>7. Assinatura, teste e cobrança</h2>
-  <ul>
-    <li>Preço, duração, teste gratuito e renovação são os exibidos pela App Store ou Google Play antes da confirmação.</li>
-    <li>A assinatura renova automaticamente até ser cancelada nas configurações da loja. Apagar o app ou a conta do leve não cancela a assinatura.</li>
-    <li>Compras, cobranças, cancelamentos e reembolsos são processados pela loja, observadas as regras da plataforma e a legislação de defesa do consumidor.</li>
-    <li>Se houver teste gratuito, a cobrança começa ao fim do período mostrado pela loja, salvo cancelamento dentro do prazo indicado.</li>
-  </ul>
-  <p>Nada nestes Termos reduz direitos obrigatórios previstos no <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm">Código de Defesa do Consumidor</a>, inclusive o direito de arrependimento quando legalmente aplicável.</p>
+  <h2 id="disponibilidade">12. Disponibilidade e mudanças</h2>
+  <p>
+    Trabalhamos para manter o Serviço disponível, mas ele pode ficar indisponível por manutenção, falha de
+    terceiros, instabilidade de rede ou caso fortuito. Podemos alterar, adicionar ou remover funcionalidades
+    para melhorar o produto. Se uma mudança reduzir de forma relevante o que você contratou, avisaremos com
+    antecedência dentro do aplicativo, e você poderá cancelar.
+  </p>
 
-  <h2>8. Uso permitido</h2>
-  <p>Você não pode tentar acessar contas de terceiros, contornar limites técnicos, explorar falhas, automatizar uso abusivo, interferir no serviço ou usar o leve para atividade ilícita. Podemos limitar ou suspender acesso quando necessário para segurança, prevenção de fraude ou proteção do serviço.</p>
+  <h2 id="responsabilidade">13. Responsabilidade</h2>
+  <p>
+    O Serviço é fornecido <strong>no estado em que se encontra</strong>. Não garantimos que os cálculos, as
+    projeções ou as estimativas correspondam ao seu resultado real: eles dependem da qualidade e da constância
+    dos seus registros, e o corpo humano não é linear.
+  </p>
+  <p>
+    Na máxima extensão permitida pela lei, não respondemos por danos decorrentes de: (i) decisões de saúde
+    tomadas com base no que o app mostrou, sem orientação profissional; (ii) registros incorretos, incompletos
+    ou não realizados por você; (iii) indisponibilidade de serviços de terceiros; (iv) perda de dados por falha,
+    perda, roubo, formatação ou substituição do seu aparelho, quando você não tiver feito backup.
+  </p>
+  <p>
+    Nada nestes termos exclui ou limita responsabilidade que a lei brasileira não permita excluir ou limitar,
+    inclusive as garantias do <strong>Código de Defesa do Consumidor</strong> e a responsabilidade por dolo.
+    Nas hipóteses em que a limitação seja admitida, a nossa responsabilidade total fica limitada ao valor que
+    você pagou pelo Serviço nos <strong>12 meses</strong> anteriores ao fato.
+  </p>
 
-  <h2>9. Disponibilidade e alterações</h2>
-  <p>O leve pode mudar, ficar temporariamente indisponível ou ter recursos descontinuados. Faremos esforços razoáveis para preservar registros e avisar sobre mudanças relevantes, mas recomendamos manter uma cópia exportada das informações importantes.</p>
+  <h2 id="encerramento">14. Encerramento</h2>
+  <p>
+    Você pode encerrar o uso quando quiser, cancelando a assinatura na loja e apagando o aplicativo. Podemos
+    suspender ou encerrar o seu acesso, com aviso, em caso de descumprimento grave destes termos, de uso
+    fraudulento ou de ordem legal. Encerrado o acesso, aplicam-se os prazos de guarda descritos na Política de
+    Privacidade.
+  </p>
 
-  <h2>10. Propriedade intelectual</h2>
-  <p>A marca, a interface, os textos, as ilustrações e o software do leve são protegidos por lei. Seus registros e fotos continuam sendo seus.</p>
+  <h2 id="alteracoes">15. Alterações destes termos</h2>
+  <p>
+    Podemos atualizar estes termos. A versão vigente fica sempre nesta página, com data no topo. Alterações
+    relevantes serão avisadas no aplicativo antes de passarem a valer. Continuar usando o Serviço depois da
+    entrada em vigor significa concordar com a nova versão; se não concordar, cancele a assinatura e pare de
+    usar o Serviço.
+  </p>
 
-  <h2>11. Responsabilidade</h2>
-  <p>Na extensão permitida por lei, o leve não responde por decisões médicas tomadas sem orientação profissional, por dados incorretos fornecidos pelo usuário, por falhas de serviços de terceiros ou por perda evitável de dados mantidos apenas no aparelho. Esta cláusula não afasta responsabilidade que não possa ser excluída por lei.</p>
+  <h2 id="lei">16. Lei aplicável e foro</h2>
+  <p>
+    Estes termos são regidos pelas leis da <strong>República Federativa do Brasil</strong>. Fica eleito o foro
+    do <strong>domicílio do consumidor</strong> para dirimir controvérsias decorrentes destes termos, conforme
+    o Código de Defesa do Consumidor. Antes de recorrer ao Judiciário, você pode nos procurar diretamente ou
+    usar a plataforma <a href="https://www.consumidor.gov.br/" target="_blank" rel="noopener">consumidor.gov.br</a>.
+  </p>
 
-  <h2>12. Encerramento</h2>
-  <p>Você pode deixar de usar o app, exportar seus dados, apagar os dados locais e, se tiver conta, solicitar a exclusão dos dados na nuvem. O encerramento da conta não cancela uma assinatura ativa na loja.</p>
+  <h2 id="contato">17. Contato</h2>
+  <p>
+    Dúvidas, pedidos e reclamações: <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.
+  </p>
 
-  <h2>13. Mudanças nestes Termos</h2>
-  <p>Podemos atualizar estes Termos para refletir mudanças do produto ou da lei. Alterações relevantes serão informadas no app ou por outro canal adequado. A data e a versão acima identificam o texto vigente.</p>
-
-  <h2>14. Lei e contato</h2>
-  <p>Aplicam-se as leis brasileiras. Fica preservado o foro legalmente competente do consumidor. Dúvidas ou solicitações podem ser enviadas para <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.</p>
-
-  <footer>Documento do produto em fase de validação. Antes do lançamento comercial, a identificação completa do fornecedor e a revisão jurídica final devem ser inseridas.</footer>
+  <footer>
+    <p>leve · Termos de Uso · versão 4.0 · 26 de agosto de 2026.</p>
+    <p><a href="./privacidade.html">Política de Privacidade</a></p>
+  </footer>
 </main>
 </body>
 </html>
