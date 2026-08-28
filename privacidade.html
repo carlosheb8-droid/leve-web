@@ -97,7 +97,7 @@
   <div class="resumo"><span class="t">O essencial, em cinco linhas</span><p>
     1. As <strong>fotos do seu corpo nunca saem do seu aparelho</strong>. Nem para nós, nem para ninguém.<br>
     2. Os seus registros de saúde ficam no aparelho por padrão; a cópia na nuvem só existe se você ligar.<br>
-    3. Usamos os seus dados para operar o app, melhorar o produto e produzir estatísticas e pesquisa em formato agregado ou anonimizado.<br>
+    3. Usamos os seus registros para operar as funções que você escolheu e eventos técnicos para corrigir falhas no app.<br>
     4. <strong>Não vendemos os seus dados</strong> e não compartilhamos dados de saúde para obter vantagem econômica.<br>
     5. Você pode ver, corrigir, exportar e apagar tudo, a qualquer momento, dentro do app.
   </p></div>
@@ -172,7 +172,7 @@
       <thead><tr><th>Categoria</th><th>Exemplos</th></tr></thead>
       <tbody>
         <tr><td>Eventos de uso</td><td>abertura do app, início e conclusão do cadastro inicial, exibição da tela de assinatura, toque em assinar, registro salvo, análise por IA, relatório gerado, semana fechada</td></tr>
-        <tr><td>Identificador do aparelho</td><td>um código aleatório gerado pelo próprio app, sem relação com o seu nome, e-mail, IDFA ou qualquer identificador de publicidade</td></tr>
+        <tr><td>Identificadores técnicos</td><td>códigos aleatórios gerados pelo próprio app para contar eventos e limitar abuso no scanner, sem relação com o seu nome, e-mail, IDFA ou identificador de publicidade</td></tr>
         <tr><td>Técnicos</td><td>versão do aplicativo e sistema operacional (iOS, Android ou web)</td></tr>
       </tbody>
     </table>
@@ -232,14 +232,9 @@
           <td>consentimento (art. 11, I), dado ao ligar o backup</td>
         </tr>
         <tr>
-          <td><strong>Melhorar o leve</strong>: entender quais telas ajudam, onde as pessoas travam, o que corrigir e o que construir</td>
-          <td>eventos de uso, dados técnicos e, mediante o seu consentimento, os seus registros em formato agregado</td>
-          <td>consentimento (art. 11, I) para dados de saúde; legítimo interesse (art. 7º, IX) para eventos de uso e dados técnicos, sempre em formato que não identifica você</td>
-        </tr>
-        <tr>
-          <td><strong>Produzir estatísticas e pesquisa</strong> sobre tratamento com GLP-1: ritmo de perda, padrão de efeitos ao longo do ciclo, adesão, resposta por faixa de dose</td>
-          <td>registros de saúde <strong>agregados ou anonimizados</strong>, nunca fotos</td>
-          <td>consentimento específico (art. 11, I) e, quando os dados estiverem anonimizados, a LGPD deixa de se aplicar (art. 12)</td>
+          <td><strong>Melhorar a estabilidade do leve</strong>: detectar falhas, lentidão e etapas que não concluem</td>
+          <td>eventos de uso e dados técnicos, sem incluir o conteúdo dos seus registros de saúde</td>
+          <td>legítimo interesse (art. 7º, IX), com minimização, pseudonimização e possibilidade de oposição</td>
         </tr>
         <tr>
           <td>Liberar e manter a assinatura, prevenir fraude e abuso</td>
@@ -268,21 +263,21 @@
     seguradoras, planos de saúde, empregadores, farmacêuticas ou corretores de dados.
   </div>
 
-  <h3>4.1. O seu consentimento é granular e reversível</h3>
+  <h3>4.1. As escolhas opcionais ficam separadas</h3>
   <p>
-    O consentimento para o uso dos seus registros em melhoria de produto, estatísticas e pesquisa é
-    <strong>separado</strong> do consentimento para usar o app, é pedido de forma destacada e pode ser
-    <strong>retirado a qualquer momento</strong> em <em>Perfil › Ajustes › Dados</em>. Retirar o consentimento
-    não bloqueia o app e não apaga os seus registros do aparelho; interrompe o uso daquele dado para aquela
-    finalidade dali em diante, e apaga da nossa base o que ainda for identificável.
+    O backup de dados de saúde só começa depois de uma autorização própria em
+    <em>Perfil › Ajustes › Seus dados</em>. As integrações de saúde são autorizadas e podem ser revogadas
+    nas configurações do próprio aparelho. A análise de refeição acontece apenas quando você envia uma foto
+    ou descrição. Você pode deixar de usar qualquer uma dessas funções sem perder o acesso aos registros que
+    continuam no aparelho. Para remover a conta e a cópia em nuvem, use <em>Seus dados › Apagar conta e dados na nuvem</em>.
   </p>
 
   <h2 id="fotos">5. Fotos: a regra e a exceção</h2>
   <h3>5.1. Fotos de progresso: nunca saem do aparelho</h3>
   <p>
     As fotos do seu corpo são gravadas <strong>exclusivamente no armazenamento do seu aparelho</strong>. Elas não
-    são enviadas para servidores do leve, não entram no backup em nuvem, não entram na exportação de dados para
-    pesquisa e não são usadas para treinar modelo nenhum. Se você apagar o app sem exportar, elas vão junto.
+    são enviadas para servidores do leve, não entram no backup em nuvem e não são usadas para treinar modelo
+    nenhum. Se você apagar o app sem exportar, elas vão junto.
     A cópia de segurança dessas imagens é responsabilidade sua, pelo backup do próprio iPhone ou Android.
   </p>
   <h3>5.2. Foto do prato: a única exceção, e é você quem dispara</h3>
@@ -317,7 +312,6 @@
         <tr><td>Fotos de progresso</td><td>somente no seu aparelho</td><td>até você apagar</td></tr>
         <tr><td>Eventos de uso</td><td>banco de dados do leve (Supabase)</td><td>até 24 meses</td></tr>
         <tr><td>Foto ou texto do prato</td><td>trânsito para o serviço de análise</td><td>o tempo da requisição; não guardamos cópia</td></tr>
-        <tr><td>Dados para estatística e pesquisa</td><td>banco de dados do leve, agregados ou anonimizados</td><td>indeterminado enquanto anonimizados; se identificáveis, até você retirar o consentimento</td></tr>
         <tr><td>Estado da assinatura</td><td>lojas de aplicativo e nossos registros</td><td>pelo prazo legal de guarda fiscal e contábil</td></tr>
         <tr><td>Mensagens de suporte</td><td>caixa de e-mail</td><td>até 5 anos, para prova de atendimento</td></tr>
       </tbody>
@@ -338,7 +332,7 @@
       <thead><tr><th>Operador</th><th>Para quê</th><th>Que dado recebe</th></tr></thead>
       <tbody>
         <tr><td>Supabase</td><td>banco de dados e backup opcional</td><td>eventos de uso; e os seus registros, se você ligar o backup</td></tr>
-        <tr><td>Cloudflare</td><td>servidor que intermedeia a análise de refeição</td><td>a foto ou o texto do prato, em trânsito</td></tr>
+        <tr><td>Cloudflare</td><td>servidor que intermedeia a análise de refeição e limita abuso</td><td>a foto ou o texto do prato, em trânsito, e um identificador técnico aleatório</td></tr>
         <tr><td>Google (Gemini)</td><td>estimativa de alimentos a partir da foto ou do texto</td><td>a foto ou o texto do prato</td></tr>
         <tr><td>Apple e Google</td><td>distribuição do app, assinatura e notificações</td><td>estado da assinatura e identificadores da loja</td></tr>
         <tr><td>Expo</td><td>infraestrutura de build e entrega de atualizações</td><td>dados técnicos do aplicativo</td></tr>
@@ -377,10 +371,9 @@
   <p>A maior parte está dentro do app, e não depende de nós:</p>
   <ul>
     <li><strong>Ver e corrigir</strong>: qualquer registro é editável na própria tela em que foi criado.</li>
-    <li><strong>Exportar</strong>: <em>Perfil › Ajustes › Dados › Backup</em> gera um arquivo com todos os seus registros.</li>
-    <li><strong>Apagar tudo</strong>: <em>Perfil › Ajustes › Dados › Recomeçar</em> apaga registros, fotos e perfil do aparelho.</li>
-    <li><strong>Retirar o consentimento de pesquisa</strong>: <em>Perfil › Ajustes › Dados</em>.</li>
-    <li><strong>Apagar a conta e o que estiver na nuvem</strong>: <em>Perfil › Ajustes › Dados › Apagar conta</em>.</li>
+    <li><strong>Exportar</strong>: <em>Perfil › Ajustes › Seus dados › Exportar ou restaurar arquivo</em> gera um arquivo com todos os seus registros.</li>
+    <li><strong>Apagar tudo deste aparelho</strong>: <em>Perfil › Ajustes › Recomeçar do zero</em> apaga registros, fotos e perfil locais.</li>
+    <li><strong>Apagar a conta e o que estiver na nuvem</strong>: <em>Perfil › Ajustes › Seus dados › Apagar conta e dados na nuvem</em>.</li>
   </ul>
   <p>
     Para qualquer outro pedido, escreva para <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>.
