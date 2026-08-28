@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="index,follow">
+  <title>Suporte - leve</title>
+  <style>
+    @font-face { font-family:Manrope; src:url('./legal-fonts/Manrope-500.ttf') format('truetype'); font-weight:500; font-style:normal; font-display:swap; }
+    @font-face { font-family:Manrope; src:url('./legal-fonts/Manrope-700.ttf') format('truetype'); font-weight:600 700; font-style:normal; font-display:swap; }
+    @font-face { font-family:Manrope; src:url('./legal-fonts/Manrope-800.ttf') format('truetype'); font-weight:800; font-style:normal; font-display:swap; }
+    /* A MESMA LETRA DO APP (Manrope). Documento legal com tipografia de outro
+       produto lê como se tivesse sido copiado de algum lugar. */
+    :root { color-scheme:light; --ink:#1d1d1f; --text:#3c4a45; --muted:#6f7d77; --line:#e2ebe7; --line-forte:#cfe0d8; --bg:#f2f6f4; --card:#fff; --accent:#0f7f5f; --accent-soft:#eaf5f0; --warn:#a95b18; --warn-soft:#fdf3e9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--text);
+      font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      font-size:16px; line-height:1.7; font-weight:500; -webkit-font-smoothing:antialiased; }
+
+    .capa { background:#173f36; color:#fff; padding:clamp(32px,7vw,64px) 0 clamp(40px,8vw,72px); }
+    .capa .dentro { width:min(880px,calc(100% - 32px)); margin:0 auto; }
+    .marca { font-size:26px; font-weight:800; letter-spacing:-.05em; margin:0 0 26px; }
+    .capa h1 { color:#fff; font-size:clamp(30px,6.5vw,46px); font-weight:800; letter-spacing:-.035em; line-height:1.06; margin:0; }
+    .capa .selo { display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+      color:#8fd6bb; border:1px solid rgba(143,214,187,.35); border-radius:999px; padding:5px 12px; margin-bottom:16px; }
+    .capa .versao { color:rgba(255,255,255,.62); font-size:14px; margin:14px 0 0; }
+
+    main { width:min(880px,calc(100% - 32px)); margin:-28px auto 56px; padding:clamp(26px,6vw,56px);
+      background:var(--card); border:1px solid var(--line); border-radius:26px; box-shadow:0 20px 60px rgba(23,63,54,.07); }
+
+    h2 { color:var(--ink); font-size:clamp(19px,3.2vw,23px); font-weight:800; letter-spacing:-.025em; line-height:1.25;
+      margin:44px 0 12px; padding-top:22px; border-top:1px solid var(--line); }
+    h2:first-of-type { border-top:0; padding-top:0; margin-top:34px; }
+    h3 { color:var(--ink); font-size:16.5px; font-weight:700; letter-spacing:-.015em; margin:26px 0 6px; }
+    p, li { max-width:76ch; }
+    p { margin:0 0 14px; }
+    ul, ol { padding-left:20px; margin:0 0 14px; }
+    li { margin:7px 0; }
+    strong { color:var(--ink); font-weight:700; }
+    a { color:var(--accent); text-underline-offset:3px; }
+
+    .resumo { margin:0 0 8px; padding:22px 24px; background:var(--accent-soft); border-radius:18px; border:1px solid rgba(15,127,95,.14); }
+    .resumo p { margin:0; }
+    .resumo .t { display:block; font-size:11.5px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+    .resumo ol { margin:0; padding-left:20px; }
+    .resumo li { margin:8px 0; }
+
+    .aviso { margin:22px 0; padding:20px 22px; background:var(--warn-soft); border-radius:18px; border:1px solid rgba(169,91,24,.18); }
+    .aviso p:last-child, .aviso ul:last-child { margin-bottom:0; }
+    .aviso .t { display:block; font-size:11.5px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--warn); margin-bottom:10px; }
+
+    .indice { margin:30px 0 0; padding:22px 24px; background:#f7faf9; border:1px solid var(--line); border-radius:18px; }
+    .indice .t { display:block; font-size:11.5px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+    .indice ol { margin:0; padding-left:20px; columns:2; column-gap:32px; font-size:15px; }
+    .indice li { margin:6px 0; break-inside:avoid; }
+    .indice a { text-decoration:none; }
+    .indice a:hover { text-decoration:underline; }
+    @media (max-width:640px){ .indice ol { columns:1; } }
+
+    .table { overflow-x:auto; margin:18px 0; border:1px solid var(--line); border-radius:16px; }
+    table { width:100%; border-collapse:collapse; min-width:620px; font-size:14.5px; }
+    th, td { padding:13px 15px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    tr:last-child td { border-bottom:0; }
+    th { color:var(--ink); background:#f7faf9; font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; }
+    td strong { font-weight:700; }
+
+    .nota { color:var(--muted); font-size:14.5px; }
+    footer { margin-top:48px; padding-top:24px; border-top:1px solid var(--line-forte); color:var(--muted); font-size:14px; }
+    footer a { font-weight:700; }
+
+    @media print {
+      body { background:#fff; }
+      .capa { background:#fff; color:#000; padding:0 0 18px; }
+      .capa h1, .marca { color:#000; }
+      .capa .selo { color:#0f7f5f; border-color:#cfe0d8; }
+      .capa .versao { color:#555; }
+      main { margin:0; border:0; box-shadow:none; border-radius:0; padding:0; }
+      .indice { display:none; }
+      h2 { break-after:avoid; }
+      .table, .aviso, .resumo { break-inside:avoid; }
+    }
+  </style>
+</head>
+<body>
+<header class="capa">
+  <div class="dentro">
+    <p class="marca">leve.</p>
+    <span class="selo">Ajuda</span>
+    <h1>Suporte</h1>
+    <p class="versao">leve · o copiloto da sua caneta</p>
+  </div>
+</header>
+<main>
+
+  <div class="resumo"><span class="t">Precisa falar com a gente</span><p>
+    Escreva para <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a>. Respondemos em até 2 dias úteis.
+    Se o assunto for um erro no app, conte qual iPhone você usa, qual versão do leve aparece no Perfil e o que você tinha acabado de fazer.
+  </p></div>
+
+  <nav class="indice" aria-label="Índice">
+    <span class="t">Nesta página</span>
+    <ol>
+      <li><a href="#comecar">Começar no leve</a></li>
+      <li><a href="#peso">Peso e gráfico</a></li>
+      <li><a href="#caneta">Aplicações e doses</a></li>
+      <li><a href="#efeitos">Efeitos</a></li>
+      <li><a href="#relatorio">Relatório para a consulta</a></li>
+      <li><a href="#dados">Seus dados, backup e exclusão</a></li>
+      <li><a href="#fotos">Fotos de progresso</a></li>
+      <li><a href="#assinatura">Assinatura e cancelamento</a></li>
+      <li><a href="#problemas">Quando algo não funciona</a></li>
+      <li><a href="#contato">Contato e documentos</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="comecar">Começar no leve</h2>
+
+  <h3>Preciso criar conta?</h3>
+  <p>Não. O leve não pede conta nem senha. Os seus dados nascem e ficam no seu iPhone.</p>
+
+  <h3>O app serve para qual caneta?</h3>
+  <p>Para as canetas e comprimidos usados no tratamento de peso no Brasil: tirzepatida (Mounjaro), semaglutida (Ozempic, Wegovy e a versão oral), liraglutida (Saxenda, Victoza) e as manipuladas. Cada marca tem a sua própria escada de doses, tirada da bula, e o leve respeita essa lista em vez de oferecer doses que a embalagem não tem.</p>
+
+  <h3>Ainda não comecei o tratamento. Dá para usar?</h3>
+  <p>Dá. No começo você diz que vai começar e marca a data prevista. Até lá o app acompanha o seu peso normalmente.</p>
+
+  <h2 id="peso">Peso e gráfico</h2>
+
+  <h3>Onde registro o peso?</h3>
+  <p>Na tela inicial, no botão fixo abaixo do gráfico. É o único registro que o leve pede todo dia.</p>
+
+  <h3>Registrei o peso errado. Como corrijo?</h3>
+  <p>Toque no ponto errado do gráfico e escolha corrigir. A tela abre já na data daquela pesagem. Correção nunca dispara comemoração.</p>
+
+  <h3>Por que a linha do gráfico não passa em cima dos pontos?</h3>
+  <p>Porque ela não é a balança, é a tendência. A balança sobe e desce com água, sal e intestino. A linha atravessa esse ruído para mostrar a direção real. Os pontos continuam desenhados, um para cada pesagem.</p>
+
+  <h3>Como leio um dia específico?</h3>
+  <p>Arraste o dedo sobre o gráfico. O número no topo acompanha o seu dedo. Toque com dois dedos e faça pinça para abrir ou fechar o período.</p>
+
+  <h3>Quando aparece a data prevista da meta?</h3>
+  <p>Quando existir queda medida o bastante para uma previsão honesta. Com poucas pesagens o app mostra o ritmo em vez de inventar uma data.</p>
+
+  <h2 id="caneta">Aplicações e doses</h2>
+
+  <h3>Como registro a aplicação?</h3>
+  <p>No dia da dose, a faixa da caneta vira um cartão no topo da tela inicial. Um toque abre o registro com data, hora, dose e local. Nos outros dias a faixa fica fina e você pode abrir o registro por ela.</p>
+
+  <h3>Esqueci de aplicar. E agora?</h3>
+  <p>O leve segue a regra da bula da sua marca, que muda de uma para outra, e diz até quando ainda dá para aplicar e quando o caso é falar com o profissional que acompanha você. O app nunca manda dobrar dose.</p>
+
+  <h3>Mudei de dose. Onde altero?</h3>
+  <p>Perfil, engrenagem, Tratamento, Medicamento. A dose nova vale das próximas aplicações em diante e o histórico antigo continua como estava.</p>
+
+  <h2 id="efeitos">Efeitos</h2>
+
+  <h3>Como marco um efeito?</h3>
+  <p>Na tela inicial, na linha de efeitos. Cada sintoma tem intensidade leve, média ou forte. Se não sentiu nada, marque nada.</p>
+
+  <h3>Para que serve o calendário de efeitos?</h3>
+  <p>Para ver se o que você sente acompanha o ciclo da aplicação ou a mudança de dose. É a informação que o seu médico costuma perguntar e ninguém lembra de cabeça.</p>
+
+  <h2 id="relatorio">Relatório para a consulta</h2>
+
+  <h3>Como gero o relatório?</h3>
+  <p>Perfil, cartão do relatório. Saem duas páginas em PDF: a primeira com peso, IMC, ritmo, curva, marcos, rotina e cobertura dos registros; a segunda com a escada de doses, as aplicações recentes, os efeitos, os sinais e uma lista de perguntas para levar.</p>
+
+  <h3>Posso mandar para o meu médico?</h3>
+  <p>Pode. O PDF é seu, sai pelo compartilhamento do iPhone e vai para onde você mandar. O leve não envia nada sozinho.</p>
+
+  <h2 id="dados">Seus dados, backup e exclusão</h2>
+
+  <h3>Onde ficam os meus dados?</h3>
+  <p>No seu iPhone. Em Perfil, engrenagem, Conta, a linha Seus dados mostra em que estado você está.</p>
+
+  <h3>Vou trocar de celular. Como levo o histórico?</h3>
+  <p>Em Seus dados você exporta um arquivo de backup e restaura no aparelho novo. O arquivo não é criptografado, então guarde em lugar que só você acessa.</p>
+
+  <h3>Como apago tudo?</h3>
+  <p>Perfil, engrenagem, Recomeçar do zero apaga os seus registros do aparelho, fotos incluídas. A ação pede confirmação e não tem volta.</p>
+
+  <h2 id="fotos">Fotos de progresso</h2>
+
+  <h3>As minhas fotos vão para algum servidor?</h3>
+  <p>Não. As fotos de corpo ficam guardadas no aparelho e nunca são enviadas para nós nem para terceiros. Você apaga qualquer uma quando quiser.</p>
+
+  <div class="aviso"><span class="t">Vale saber</span><p>
+    Apagar o app do iPhone apaga junto as fotos e os registros guardados nele. Se quiser manter o histórico, exporte o backup antes.
+  </p></div>
+
+  <h2 id="assinatura">Assinatura e cancelamento</h2>
+
+  <h3>Como funciona a cobrança?</h3>
+  <p>A assinatura é vendida pela App Store, com renovação automática, e o preço aparece na tela de compra antes de qualquer cobrança. A cobrança é feita na sua conta Apple.</p>
+
+  <h3>Como cancelo?</h3>
+  <p>Ajustes do iPhone, toque no seu nome, Assinaturas, leve, Cancelar. O cancelamento vale para o próximo período e você continua usando até o fim do período já pago. Cancele com pelo menos 24 horas de antecedência para não ser cobrado de novo.</p>
+
+  <h3>Troquei de aparelho e perdi o acesso.</h3>
+  <p>Use Restaurar compra, na tela de assinatura do app. A compra está ligada ao seu ID Apple, não ao aparelho.</p>
+
+  <h3>Quero reembolso.</h3>
+  <p>Reembolso de compra feita na App Store é pedido diretamente à Apple, em <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Não temos acesso ao seu pagamento. Se o motivo foi um problema do app, escreva para a gente também, porque queremos saber.</p>
+
+  <h2 id="problemas">Quando algo não funciona</h2>
+
+  <h3>O app não mostra os planos na tela de assinatura.</h3>
+  <p>Em geral é a loja da Apple sem resposta na hora. Confira a conexão e tente de novo. Nada é cobrado enquanto a loja não responde.</p>
+
+  <h3>Não estou recebendo o lembrete da aplicação.</h3>
+  <p>Confira em Ajustes do iPhone, Notificações, leve, se as notificações estão permitidas. Depois, no app, em Perfil, engrenagem, Tratamento, confirme que o lembrete está ligado e no horário certo.</p>
+
+  <h3>A câmera não abre.</h3>
+  <p>Ajustes do iPhone, leve, Câmera. Sem essa permissão o app não consegue tirar a foto.</p>
+
+  <h3>Achei um erro.</h3>
+  <p>Escreva para <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a> contando o que você fez, o que esperava e o que aconteceu. Print ajuda muito.</p>
+
+  <h2 id="contato">Contato e documentos</h2>
+
+  <p>
+    E-mail: <a href="mailto:carlosheb8@gmail.com">carlosheb8@gmail.com</a><br>
+    Prazo de resposta: até 2 dias úteis<br>
+    Atendimento em português.
+  </p>
+
+  <div class="aviso"><span class="t">Aviso</span><p>
+    O leve é um app de registro e organização do seu tratamento. Ele não é um dispositivo médico, não faz diagnóstico e não substitui a orientação de quem acompanha você. Nenhuma decisão sobre dose, início, pausa ou troca de tratamento deve ser tomada com base no que o app mostra. Em caso de sintoma grave ou dúvida clínica, procure o seu médico ou um serviço de saúde.
+  </p></div>
+
+  <footer>
+    <p>leve · Suporte.</p>
+    <p><a href="./termos.html">Termos de Uso</a> · <a href="./privacidade.html">Política de Privacidade</a></p>
+  </footer>
+</main>
+</body>
+</html>
