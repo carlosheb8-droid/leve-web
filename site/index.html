@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="O copiloto da sua jornada de emagrecimento com caneta. Peso, aplicações e efeitos num app só, feito para o Brasil.">
+<title>leve - o copiloto da sua caneta</title>
+</head>
+<body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap">
+
+<style>
+  /* Mesma paleta dos documentos legais e do app: nada inventado. */
+  :root {
+    color-scheme: light;
+    --ground: #f2f6f4;
+    --deep: #173f36;
+    --deep-2: #0f2d26;
+    --accent: #0f7f5f;
+    --accent-soft: #e9f4f0;
+    --mint: #8fd6bb;
+    --ink: #1d1d1f;
+    --text: #3c4a45;
+    --muted: #6f7d77;
+    --line: #e2ebe7;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #0f1512; --deep: #10201b; --deep-2: #0b1713;
+      --accent: #4fc79b; --accent-soft: #12261f; --mint: #7fdcb8;
+      --ink: #eaf1ed; --text: #c2cfc8; --muted: #8b9a93;
+      --line: #26332d; --card: #18211d;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #0f1512; --deep: #10201b; --deep-2: #0b1713;
+    --accent: #4fc79b; --accent-soft: #12261f; --mint: #7fdcb8;
+    --ink: #eaf1ed; --text: #c2cfc8; --muted: #8b9a93;
+    --line: #26332d; --card: #18211d;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--text);
+    font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .dentro { width: min(60rem, calc(100% - 2.5rem)); margin: 0 auto; }
+
+  /* ---------- capa ---------- */
+  .capa {
+    background: linear-gradient(168deg, var(--deep) 0%, var(--deep-2) 100%);
+    color: #fff;
+    padding: clamp(2rem, 6vw, 3.5rem) 0 clamp(3.5rem, 10vw, 6.5rem);
+  }
+  nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .marca { font-size: 1.5rem; font-weight: 800; letter-spacing: -.05em; }
+  .marca span { color: var(--mint); }
+  nav .links { display: flex; gap: 1.4rem; }
+  nav a { color: rgba(255,255,255,.72); text-decoration: none; font-size: .92rem; font-weight: 700; }
+  nav a:hover, nav a:focus-visible { color: #fff; }
+
+  .heroi { margin-top: clamp(3rem, 9vw, 5.5rem); max-width: 40rem; }
+  .selo {
+    display: inline-block; font-size: .7rem; font-weight: 800; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--mint);
+    border: 1px solid rgba(143,214,187,.35); border-radius: 999px;
+    padding: .32rem .8rem; margin-bottom: 1.2rem;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 7.5vw, 3.6rem);
+    font-weight: 800; letter-spacing: -.035em; line-height: 1.04;
+    margin: 0 0 1rem; color: #fff; text-wrap: balance;
+  }
+  .heroi p { margin: 0 0 1.8rem; color: rgba(255,255,255,.75); font-size: 1.05rem; max-width: 34rem; }
+  .loja {
+    display: inline-flex; align-items: center; gap: .65rem;
+    background: #fff; color: #111;
+    border-radius: .9rem; padding: .8rem 1.3rem;
+    text-decoration: none; font-weight: 800; font-size: 1rem;
+    letter-spacing: -.01em;
+  }
+  .loja svg { flex: 0 0 auto; }
+  .loja small { display: block; font-size: .68rem; font-weight: 700; color: #555; letter-spacing: .02em; }
+  .loja-nota { display: block; margin-top: .8rem; color: rgba(255,255,255,.5); font-size: .82rem; }
+
+  /* ---------- o que é ---------- */
+  .tres { padding: clamp(2.5rem, 7vw, 4.5rem) 0; }
+  .tres .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; }
+  .cartao {
+    background: var(--card); border: 1px solid var(--line); border-radius: 1.2rem;
+    padding: 1.4rem 1.4rem 1.5rem;
+  }
+  .cartao .ico {
+    width: 2.6rem; height: 2.6rem; border-radius: .9rem;
+    background: var(--accent-soft); display: grid; place-items: center; margin-bottom: .9rem;
+  }
+  .cartao h2 { font-size: 1.05rem; font-weight: 800; letter-spacing: -.02em; color: var(--ink); margin: 0 0 .35rem; }
+  .cartao p { margin: 0; font-size: .93rem; }
+
+  /* ---------- rodapé ---------- */
+  footer { border-top: 1px solid var(--line); padding: 2rem 0 2.6rem; }
+  .pe { display: flex; flex-wrap: wrap; gap: .8rem 2rem; align-items: baseline; justify-content: space-between; }
+  .pe .marca { font-size: 1.1rem; color: var(--ink); }
+  .pe .links { display: flex; flex-wrap: wrap; gap: 1.4rem; }
+  .pe a { color: var(--accent); text-decoration: none; font-size: .9rem; font-weight: 700; }
+  .pe a:hover { text-decoration: underline; }
+  .aviso { margin-top: 1.4rem; color: var(--muted); font-size: .8rem; max-width: 46rem; }
+</style>
+
+<header class="capa">
+  <div class="dentro">
+    <nav aria-label="Principal">
+      <span class="marca">leve<span>.</span></span>
+      <span class="links">
+        <a href="../termos.html">Termos</a>
+        <a href="../privacidade.html">Privacidade</a>
+        <a href="../suporte.html">Suporte</a>
+      </span>
+    </nav>
+
+    <div class="heroi">
+      <span class="selo">Para quem usa caneta de emagrecer</span>
+      <h1>O copiloto da sua jornada de emagrecimento</h1>
+      <p>O leve acompanha seu peso, suas aplicações e o que você sente — e transforma isso no relatório que o seu médico pede. Feito no Brasil, em português, para Mounjaro, Ozempic, Wegovy, Saxenda, Rybelsus e manipuladas.</p>
+      <span class="loja" aria-disabled="true" style="opacity:.92;cursor:default"><svg width="22" height="26" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span><small>Em breve na</small>App Store</span></span>
+      <span class="loja-nota">Primeiro no iPhone. Assinatura cancelável a qualquer momento, direto na loja.</span>
+    </div>
+  </div>
+</header>
+
+<section class="tres" aria-label="O que o leve faz">
+  <div class="dentro grade">
+    <div class="cartao">
+      <div class="ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17c3-1 5-6 8-7s5 2 10-5" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/><circle cx="21" cy="5" r="2.4" fill="var(--accent)"/></svg>
+      </div>
+      <h2>A balança, sem drama</h2>
+      <p>Cada pesagem vira um ponto. A linha atravessa o sobe-e-desce e mostra a direção real — e quando você chega na sua meta.</p>
+    </div>
+    <div class="cartao">
+      <div class="ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15.5 3.5 20.5 8.5M17 6 7.5 15.5l-4 4.5 4.5-4" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2>A caneta em dia</h2>
+      <p>Registro em dois toques, a escada de doses da sua marca tirada da bula, e a regra certa quando a aplicação atrasa. Nunca manda dobrar dose.</p>
+    </div>
+    <div class="cartao">
+      <div class="ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4.5h8a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2ZM9 9h6M9 12.5h6M9 16h3.5" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <h2>Pronto pra consulta</h2>
+      <p>Duas páginas em PDF: peso, IMC, escada de doses, efeitos e as perguntas para levar. Gera no aparelho e sai pelo compartilhamento.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="dentro">
+    <div class="pe">
+      <span class="marca">leve<span style="color:var(--accent)">.</span></span>
+      <span class="links">
+        <a id="termos" href="../termos.html">Termos de Uso</a>
+        <a id="privacidade" href="../privacidade.html">Política de Privacidade</a>
+        <a id="suporte" href="../suporte.html">Suporte</a>
+      </span>
+    </div>
+    <p class="aviso">O leve é um app de registro e organização do seu tratamento. Não é dispositivo médico, não faz diagnóstico e não substitui a orientação de quem acompanha você. © 2026 leve.</p>
+  </div>
+</footer>
+
+</body>
+</html>
