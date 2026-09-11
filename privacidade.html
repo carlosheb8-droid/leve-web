@@ -89,13 +89,13 @@
     <p class="marca">leve.</p>
     <span class="selo">Documento legal</span>
     <h1>Política de Privacidade</h1>
-    <p class="versao">leve · versão 4.0 · vigente desde 26 de agosto de 2026</p>
+    <p class="versao">leve · versão 4.1 · atualizada em 11 de setembro de 2026</p>
   </div>
 </header>
 <main>
 
   <div class="resumo"><span class="t">O essencial, em cinco linhas</span><p>
-    1. As <strong>fotos do seu corpo nunca saem do seu aparelho</strong>. Nem para nós, nem para ninguém.<br>
+    1. Suas fotos ficam no aparelho; <strong>só entram no backup privado após autorização específica</strong>.<br>
     2. Os seus registros de saúde ficam no aparelho por padrão; a cópia na nuvem só existe se você ligar.<br>
     3. Usamos os seus registros para operar as funções que você escolheu e eventos técnicos para corrigir falhas no app.<br>
     4. <strong>Não vendemos os seus dados</strong> e não compartilhamos dados de saúde para obter vantagem econômica.<br>
@@ -161,7 +161,7 @@
         <tr><td>Efeitos colaterais</td><td>náusea, refluxo, constipação, fadiga, tontura e outros, com intensidade e data</td></tr>
         <tr><td>Rotina</td><td>proteína e alimentos registrados, água, sono, exercício e treino de força</td></tr>
         <tr><td>Condições declaradas</td><td>condições de saúde e sinais de alerta informados no início, usados para adaptar o conteúdo e o relatório</td></tr>
-        <tr><td>Fotos de progresso</td><td>imagens do seu corpo, com a data · <strong>ficam somente no seu aparelho</strong> (seção 5)</td></tr>
+        <tr><td>Fotos de progresso</td><td>imagens do seu corpo, com a data; cópia local e backup privado somente se autorizado (seção 5)</td></tr>
       </tbody>
     </table>
   </div>
@@ -228,7 +228,7 @@
         </tr>
         <tr>
           <td>Manter a sua cópia de segurança e permitir a troca de aparelho</td>
-          <td>os seus registros, exceto fotos de progresso</td>
+          <td>seus registros e, com autorização separada, fotos de progresso e de refeições salvas</td>
           <td>consentimento (art. 11, I), dado ao ligar o backup</td>
         </tr>
         <tr>
@@ -273,19 +273,25 @@
   </p>
 
   <h2 id="fotos">5. Fotos: a regra e a exceção</h2>
-  <h3>5.1. Fotos de progresso: nunca saem do aparelho</h3>
+  <h3>5.1. Fotos de progresso e backup opcional</h3>
   <p>
-    As fotos do seu corpo são gravadas <strong>exclusivamente no armazenamento do seu aparelho</strong>. Elas não
-    são enviadas para servidores do leve, não entram no backup em nuvem e não são usadas para treinar modelo
-    nenhum. Se você apagar o app sem exportar, elas vão junto.
-    A cópia de segurança dessas imagens é responsabilidade sua, pelo backup do próprio iPhone ou Android.
+    Suas fotos são guardadas no aparelho. Em <em>Conta e backup › Incluir fotos no backup</em>, você pode
+    autorizar uma cópia privada no Supabase, associada à sua conta, para recuperação em outro aparelho.
+    A autorização para os registros não autoriza automaticamente as fotos. Depois do aceite específico,
+    o envio ocorre ao usar ou voltar ao app, quando há conexão. A tela informa envios pendentes e a última cópia concluída.
+    As imagens têm criptografia em trânsito e em repouso pelo provedor; <strong>não é criptografia de ponta a ponta</strong>.
+    O backup não envia fotos de corpo à IA nem as utiliza para treinamento. Pausar o backup interrompe novos envios,
+    mas preserva a última cópia. Apagar a conta e os dados na nuvem também elimina suas fotos armazenadas.
+    Imagens retiradas da recuperação podem permanecer como arquivos residuais privados até a exclusão da cópia ou da conta.
+    O arquivo JSON exportado pelo app contém registros, não as imagens; você pode exportar fotos pela galeria do leve.
   </p>
-  <h3>5.2. Foto do prato: a única exceção, e é você quem dispara</h3>
+  <h3>5.2. Análise do prato: você escolhe quando enviar</h3>
   <p>
     Quando você usa o recurso de estimar a refeição por foto, aquela imagem específica é enviada, por conexão
     criptografada, ao nosso serviço de análise e de lá ao provedor de inteligência artificial, apenas para
     devolver a lista de alimentos e a estimativa de gramas. A imagem é usada para produzir essa resposta e
-    <strong>não é associada ao seu perfil nem armazenada por nós para outra finalidade</strong>. Se preferir não
+    <strong>não é armazenada pelo serviço de análise</strong>. A foto salva no registro pode entrar no backup
+    privado somente com a autorização descrita acima. Se preferir não
     enviar imagem alguma, o app aceita a descrição por texto, que segue o mesmo caminho.
   </p>
 
@@ -309,9 +315,9 @@
       <thead><tr><th>Dado</th><th>Onde fica</th><th>Por quanto tempo</th></tr></thead>
       <tbody>
         <tr><td>Registros de saúde e perfil</td><td>no seu aparelho; e em nuvem apenas se você ligar o backup</td><td>enquanto você usar o app; apagados imediatamente ao usar "Apagar tudo"</td></tr>
-        <tr><td>Fotos de progresso</td><td>somente no seu aparelho</td><td>até você apagar</td></tr>
+        <tr><td>Fotos de progresso e de refeições salvas</td><td>aparelho e, se autorizado, armazenamento privado no Supabase</td><td>cópia local até excluir; cópia e arquivos residuais na nuvem até excluir a cópia ou a conta</td></tr>
         <tr><td>Eventos de uso</td><td>banco de dados do leve (Supabase)</td><td>até 24 meses</td></tr>
-        <tr><td>Foto ou texto do prato</td><td>trânsito para o serviço de análise</td><td>o tempo da requisição; não guardamos cópia</td></tr>
+        <tr><td>Foto ou texto enviado à IA</td><td>trânsito para o serviço de análise</td><td>não guardamos cópia no serviço de análise; backup de fotos salvas é separado</td></tr>
         <tr><td>Estado da assinatura</td><td>lojas de aplicativo e nossos registros</td><td>pelo prazo legal de guarda fiscal e contábil</td></tr>
         <tr><td>Mensagens de suporte</td><td>caixa de e-mail</td><td>até 5 anos, para prova de atendimento</td></tr>
       </tbody>
@@ -331,7 +337,7 @@
     <table>
       <thead><tr><th>Operador</th><th>Para quê</th><th>Que dado recebe</th></tr></thead>
       <tbody>
-        <tr><td>Supabase</td><td>banco de dados e backup opcional</td><td>eventos de uso; e os seus registros, se você ligar o backup</td></tr>
+        <tr><td>Supabase</td><td>banco de dados e backup opcional</td><td>eventos de uso; registros se autorizado; fotos somente com autorização adicional</td></tr>
         <tr><td>Cloudflare</td><td>servidor que intermedeia a análise de refeição e limita abuso</td><td>a foto ou o texto do prato, em trânsito, e um identificador técnico aleatório</td></tr>
         <tr><td>Google (Gemini)</td><td>estimativa de alimentos a partir da foto ou do texto</td><td>a foto ou o texto do prato</td></tr>
         <tr><td>Apple e Google</td><td>distribuição do app, assinatura e notificações</td><td>estado da assinatura e identificadores da loja</td></tr>
@@ -434,7 +440,7 @@
   </p>
 
   <footer>
-    <p>leve · Política de Privacidade · versão 4.0 · 26 de agosto de 2026.</p>
+    <p>leve · Política de Privacidade · versão 4.1 · 11 de setembro de 2026.</p>
     <p><a href="./termos.html">Termos de Uso</a></p>
   </footer>
 </main>
